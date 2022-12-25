@@ -1,4 +1,6 @@
 import Batch from "../models/batch.model";
+import FacultyAdviser from "../models/faculty-adviser.model";
+import Faculty from "../models/faculty.model";
 import Student from "../models/student.model";
 import { generateToken, Response, verifyHash } from "../utils";
 
@@ -24,7 +26,8 @@ const studentController = {
     },
     async getStudent(req, res) {
         try {
-            const user = await Student.findByPk(req.user.id);
+            const {studentId} = req.query;
+            const user = await Student.findByPk(studentId);
             if(!user){
                 return res.json(Response(400,"User doesn't exist"));
             }
@@ -33,12 +36,34 @@ const studentController = {
             return res.status(500).json(Response(500, "Internal Server Error", error));
         }
     },
-    async getStudentBatch(req,res){
+    async getStudentsByBatch(req,res){
         try {
             const {batchId} = req.params;
-            const batch = await Batch.findOne({whrere:{id:batchId},include:[Student]});
+            const batch = await Student.findAll({where:{batch_id:batchId}});
             return res.json(Response(200,"Success",batch));
         } catch (error) {
+            return res.status(500).json(Response(500, "Internal Server Error", error));
+        }
+    },
+    async getFA(req,res){
+        try {
+            const {id} = req.params;
+           const data = await FacultyAdviser.findOne({where:{student_id:id}});
+           const fa = await Faculty.findOne({where:{faculty_id:data.faculty_id}});
+            return res.json(Response(200,"Success",fa));
+        } catch (error) {
+            console.log(error);
+            return res.status(500).json(Response(500, "Internal Server Error", error));
+        }
+    },
+    async updateGrade(req,res){
+        try {
+            const {id} = req.params;
+            const {grade} = req.body;
+            const data = await Student.update({grade},{where:{student_id:id}});
+            return res.json(Response(200,"Updated grade successfully",data));
+        } catch (error) {
+            console.log(error);
             return res.status(500).json(Response(500, "Internal Server Error", error));
         }
     }

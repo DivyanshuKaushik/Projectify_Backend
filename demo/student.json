@@ -1,0 +1,42 @@
+[
+    {
+        "student_id":"RA1811003010001",
+        "name":"Abhishek Dubey",
+        "email":"abhishek@srmist.edu.in",
+        "password":"$2a$12$54NIaqp7j2HYGZCFCxxQO.vjZe33lEo1tEu8FYnelwRoGu7u1speO",
+        "mobile":"9444033333",
+        "grade":"",
+        "batch_id":"1",
+        "project_id":"1"
+    },
+    {
+        "student_id":"RA1811003010003",
+        "name":"Ayush Sharma",
+        "email":"ayush@srmist.edu.in",
+        "password":"$2a$12$54NIaqp7j2HYGZCFCxxQO.vjZe33lEo1tEu8FYnelwRoGu7u1speO",
+        "mobile":"9444033333",
+        "grade":"",
+        "batch_id":"1",
+        "project_id":"1"
+    },
+    {
+        "student_id":"RA1811003010081",
+        "name":"Divyanshu Kaushik",
+        "email":"diyanshu@srmist.edu.in",
+        "password":"$2a$12$54NIaqp7j2HYGZCFCxxQO.vjZe33lEo1tEu8FYnelwRoGu7u1speO",
+        "mobile":"9444033333",
+        "grade":"",
+        "batch_id":"2",
+        "project_id":"2"
+    },
+    {
+        "student_id":"RA1811003010083",
+        "name":"Rishit Shivesh",
+        "email":"rishit@srmist.edu.in",
+        "password":"$2a$12$54NIaqp7j2HYGZCFCxxQO.vjZe33lEo1tEu8FYnelwRoGu7u1speO",
+        "mobile":"9444033333",
+        "grade":"",
+        "batch_id":"2",
+        "project_id":"2"
+    }
+]

@@ -1,0 +1,83 @@
+[
+    {
+        "faculty_id":"100185",
+        "name":"Dr.G.Niranjana",
+        "email":"gniranjana@srmist.edu.in",
+        "password":"$2a$12$54NIaqp7j2HYGZCFCxxQO.vjZe33lEo1tEu8FYnelwRoGu7u1speO",
+        "designation":"Assistant Professor",
+        "mobile":"9444033333"
+    },
+    {
+        "faculty_id":"101933",
+        "name":"Mrs.Gayathri M",
+        "email":"mgayathri@srmist.edu.in",
+        "password":"$2a$12$54NIaqp7j2HYGZCFCxxQO.vjZe33lEo1tEu8FYnelwRoGu7u1speO",
+        "designation":"Assistant Professor",
+        "mobile":"9444033333"
+    },
+    {
+        "faculty_id":"101242",
+        "name":"Mr.Pradeep S",
+        "email":"spradeep@srmist.edu.in",
+        "password":"$2a$12$54NIaqp7j2HYGZCFCxxQO.vjZe33lEo1tEu8FYnelwRoGu7u1speO",
+        "designation":"Assistant Professor",
+        "mobile":"9444033333"
+    },
+    {
+        "faculty_id":"101308",
+        "name":"Mr.C.Santhanakrishnan",
+        "email":"skrishna@srmist.edu.in",
+        "password":"$2a$12$54NIaqp7j2HYGZCFCxxQO.vjZe33lEo1tEu8FYnelwRoGu7u1speO",
+        "designation":"Assistant Professor",
+        "mobile":"9444033333"
+    },
+    {
+        "faculty_id":"102550",
+        "name":"Dr.P.MURALI",
+        "email":"pmurali@srmist.edu.in",
+        "password":"$2a$12$54NIaqp7j2HYGZCFCxxQO.vjZe33lEo1tEu8FYnelwRoGu7u1speO",
+        "designation":"Assistant Professor",
+        "mobile":"9444033333"
+    },
+    {
+        "faculty_id":"101061",
+        "name":"Mr.Saminathan S",
+        "email":"saminathan@srmist.edu.in",
+        "password":"$2a$12$54NIaqp7j2HYGZCFCxxQO.vjZe33lEo1tEu8FYnelwRoGu7u1speO",
+        "designation":"Assistant Professor",
+        "mobile":"9444033333"
+    },
+    {
+        "faculty_id":"102084",
+        "name":"Mrs.R.LAVANYA",
+        "email":"rlavanya@srmist.edu.in",
+        "password":"$2a$12$54NIaqp7j2HYGZCFCxxQO.vjZe33lEo1tEu8FYnelwRoGu7u1speO",
+        "designation":"Assistant Professor",
+        "mobile":"9444033333"
+    },
+    {
+        "faculty_id":"101536",
+        "name":"Vathana D",
+        "email":"dvathana@srmist.edu.in",
+        "password":"$2a$12$54NIaqp7j2HYGZCFCxxQO.vjZe33lEo1tEu8FYnelwRoGu7u1speO",
+        "designation":"Assistant Professor",
+        "mobile":"9444033333"
+    },
+    {
+        "faculty_id":"100503",
+        "name":"Dr. A. Pandian",
+        "email":"pandiana@srmist.edu.in",
+        "password":"$2a$12$54NIaqp7j2HYGZCFCxxQO.vjZe33lEo1tEu8FYnelwRoGu7u1speO",
+        "designation":"Assistant Professor",
+        "mobile":"9444033333"
+    },
+    {
+        "faculty_id":"102600",
+        "name":"Dr. R. S. Ponmagal",
+        "email":"ponmagas@srmist.edu.in",
+        "password":"$2a$12$54NIaqp7j2HYGZCFCxxQO.vjZe33lEo1tEu8FYnelwRoGu7u1speO",
+        "designation":"Assistant Professor",
+        "mobile":"9444033333"
+    }
+
+]

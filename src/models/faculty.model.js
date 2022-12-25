@@ -1,9 +1,14 @@
 import { DataTypes } from "sequelize";
 import sequelize from "../db";
 import Batch from "./batch.model";
+import FacultyAdviser from "./faculty-adviser.model";
 
 const Faculty = sequelize.define("Faculty", {
-    username: {
+    faculty_id: {
+        type: DataTypes.STRING,
+        primaryKey: true,
+    },
+    email: {
         type: DataTypes.STRING,
         allowNull: false,
     },
@@ -15,7 +20,7 @@ const Faculty = sequelize.define("Faculty", {
         type: DataTypes.STRING,
         allowNull: false,
     },
-    department: {
+    mobile: {
         type: DataTypes.STRING,
         allowNull: false,
     },
@@ -25,14 +30,21 @@ const Faculty = sequelize.define("Faculty", {
     },
 });
 
-// defining one to many relation between faculty and batches table
-Faculty.hasMany(Batch, {
+// // defining one to many relation between faculty and batches table
+// Faculty.hasMany(Batch, {
+//     foreignKey: {
+//         name: "facultyId",
+//         allowNull: true,
+//         // onDelete: "CASCADE",
+//         // onUpdate: "CASCADE",
+//     },
+// });
+
+// one facuty adviser can have many students - populate faculty_adviser table
+Faculty.hasMany(FacultyAdviser,{
     foreignKey: {
-        name: "facultyId",
-        allowNull: true,
-        // onDelete: "CASCADE",
-        // onUpdate: "CASCADE",
+        name: "faculty_id",
     },
-});
+})
 
 export default Faculty;

@@ -2,9 +2,9 @@ import { DataTypes } from "sequelize";
 import sequelize from "../db";
 
 const Student = sequelize.define("Student", {
-    username: {
+    student_id: {
         type: DataTypes.STRING,
-        allowNull: false,
+        primaryKey: true,
     },
     password: {
         type: DataTypes.STRING,
@@ -14,10 +14,18 @@ const Student = sequelize.define("Student", {
         type: DataTypes.STRING,
         allowNull: false,
     },
-    sec:{
+    email:{
         type: DataTypes.STRING,
         allowNull: false,
     },
+    mobile:{
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+    grade:{
+        type: DataTypes.STRING,
+        allowNull: true,
+    }
 });
 
 export default Student;

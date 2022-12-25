@@ -3,20 +3,21 @@ import sequelize from "../db";
 import Student from "./student.model";
 
 const Batch = sequelize.define("Batch", {
-    status: {
-        type: DataTypes.STRING,
-        allowNull: false,
+    batch_id:{
+        type: DataTypes.INTEGER,
+        primaryKey: true,
+        autoIncrement: true,
     },
-    report: {
+    remarks:{
         type: DataTypes.STRING,
-        allowNull: false,
-    },
+        allowNull: true,
+    }
 });
 
 // defining one to many relation between faculty and batches table
 Batch.hasMany(Student, {
     foreignKey: {
-        name: "batchId",
+        name: "batch_id",
         allowNull: true,
         // onDelete: "CASCADE",
         // onUpdate: "CASCADE",

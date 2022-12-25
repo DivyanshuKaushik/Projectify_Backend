@@ -7,10 +7,10 @@ const router = Router();
 router.post("/faculty/login",facultyControllers.facultyLogin)
 
 // get faculty details
-router.get("/faculty",isFaculty,facultyControllers.getFaculty);
+router.get("/faculty",facultyControllers.getFaculty);
 
 // get faculty batch details including students 
-router.get("/faculty/batches",isFaculty,facultyControllers.getBatches);
+router.get("/faculty/batches",facultyControllers.getBatches);
 
 
 

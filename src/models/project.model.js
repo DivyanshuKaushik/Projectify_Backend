@@ -14,7 +14,7 @@ const Project = sequelize.define("Project", {
 });
 Project.hasMany(Student, {
     foreignKey: {
-        name: "projectId",
+        name: "project_id",
         allowNull: true,
         // onDelete: "CASCADE",
         // onUpdate: "CASCADE",
