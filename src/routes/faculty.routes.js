@@ -7,11 +7,14 @@ const router = Router();
 router.post("/faculty/login",facultyControllers.facultyLogin)
 
 // get faculty details
-router.get("/faculty",facultyControllers.getFaculty);
+router.get("/faculty",isFaculty,facultyControllers.getFaculty);
 
 // get faculty batch details including students 
-router.get("/faculty/batches",facultyControllers.getBatches);
+router.get("/faculty/batches",isFaculty,facultyControllers.getBatches);
 
+// get student details by faculty advisor
+
+router.get("/faculty/students",isFaculty,facultyControllers.getStudentsByFaculty);
 
 
 export default router;

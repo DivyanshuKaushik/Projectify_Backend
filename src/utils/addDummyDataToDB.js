@@ -15,13 +15,13 @@ import FacultyAdviser from '../models/faculty-adviser.model';
 
 async function addDummyDataToDB() {
     try{
-        // await Faculty.bulkCreate(facultyData);
-        // await Panel.bulkCreate(panelData);
-        // await PanelMember.bulkCreate(panelMemberData);
-        // await Batch.bulkCreate(batchData);
-        // await Project.bulkCreate(projectData);
-        // await Student.bulkCreate(studentData);
-        // await FacultyAdviser.bulkCreate(facultyAdviserData);
+        await Faculty.bulkCreate(facultyData);
+        await Panel.bulkCreate(panelData);
+        await PanelMember.bulkCreate(panelMemberData);
+        await Batch.bulkCreate(batchData);
+        await Project.bulkCreate(projectData);
+        await Student.bulkCreate(studentData);
+        await FacultyAdviser.bulkCreate(facultyAdviserData);
         console.log("Added dummy data to DB");
     }catch(err){
         console.error(err);

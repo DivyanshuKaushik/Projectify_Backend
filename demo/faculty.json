@@ -5,7 +5,8 @@
         "email":"gniranjana@srmist.edu.in",
         "password":"$2a$12$54NIaqp7j2HYGZCFCxxQO.vjZe33lEo1tEu8FYnelwRoGu7u1speO",
         "designation":"Assistant Professor",
-        "mobile":"9444033333"
+        "mobile":"9444033333",
+        "role":"panel_head"
     },
     {
         "faculty_id":"101933",
@@ -13,7 +14,8 @@
         "email":"mgayathri@srmist.edu.in",
         "password":"$2a$12$54NIaqp7j2HYGZCFCxxQO.vjZe33lEo1tEu8FYnelwRoGu7u1speO",
         "designation":"Assistant Professor",
-        "mobile":"9444033333"
+        "mobile":"9444033333",
+        "role":"faculty"
     },
     {
         "faculty_id":"101242",
@@ -21,7 +23,8 @@
         "email":"spradeep@srmist.edu.in",
         "password":"$2a$12$54NIaqp7j2HYGZCFCxxQO.vjZe33lEo1tEu8FYnelwRoGu7u1speO",
         "designation":"Assistant Professor",
-        "mobile":"9444033333"
+        "mobile":"9444033333",
+        "role":"faculty"
     },
     {
         "faculty_id":"101308",
@@ -29,7 +32,8 @@
         "email":"skrishna@srmist.edu.in",
         "password":"$2a$12$54NIaqp7j2HYGZCFCxxQO.vjZe33lEo1tEu8FYnelwRoGu7u1speO",
         "designation":"Assistant Professor",
-        "mobile":"9444033333"
+        "mobile":"9444033333",
+        "role":"faculty"
     },
     {
         "faculty_id":"102550",
@@ -37,7 +41,8 @@
         "email":"pmurali@srmist.edu.in",
         "password":"$2a$12$54NIaqp7j2HYGZCFCxxQO.vjZe33lEo1tEu8FYnelwRoGu7u1speO",
         "designation":"Assistant Professor",
-        "mobile":"9444033333"
+        "mobile":"9444033333",
+        "role":"panel_head"
     },
     {
         "faculty_id":"101061",
@@ -45,7 +50,8 @@
         "email":"saminathan@srmist.edu.in",
         "password":"$2a$12$54NIaqp7j2HYGZCFCxxQO.vjZe33lEo1tEu8FYnelwRoGu7u1speO",
         "designation":"Assistant Professor",
-        "mobile":"9444033333"
+        "mobile":"9444033333",
+        "role":"faculty"
     },
     {
         "faculty_id":"102084",
@@ -53,7 +59,8 @@
         "email":"rlavanya@srmist.edu.in",
         "password":"$2a$12$54NIaqp7j2HYGZCFCxxQO.vjZe33lEo1tEu8FYnelwRoGu7u1speO",
         "designation":"Assistant Professor",
-        "mobile":"9444033333"
+        "mobile":"9444033333",
+        "role":"faculty"
     },
     {
         "faculty_id":"101536",
@@ -61,7 +68,8 @@
         "email":"dvathana@srmist.edu.in",
         "password":"$2a$12$54NIaqp7j2HYGZCFCxxQO.vjZe33lEo1tEu8FYnelwRoGu7u1speO",
         "designation":"Assistant Professor",
-        "mobile":"9444033333"
+        "mobile":"9444033333",
+        "role":"faculty"
     },
     {
         "faculty_id":"100503",
@@ -69,7 +77,8 @@
         "email":"pandiana@srmist.edu.in",
         "password":"$2a$12$54NIaqp7j2HYGZCFCxxQO.vjZe33lEo1tEu8FYnelwRoGu7u1speO",
         "designation":"Assistant Professor",
-        "mobile":"9444033333"
+        "mobile":"9444033333",
+        "role":"faculty"
     },
     {
         "faculty_id":"102600",
@@ -77,7 +86,17 @@
         "email":"ponmagas@srmist.edu.in",
         "password":"$2a$12$54NIaqp7j2HYGZCFCxxQO.vjZe33lEo1tEu8FYnelwRoGu7u1speO",
         "designation":"Assistant Professor",
-        "mobile":"9444033333"
+        "mobile":"9444033333",
+        "role":"faculty"
+    },
+    {
+        "faculty_id":"100100",
+        "name":"R Senthil Raja",
+        "email":"senthilr@srmist.edu.in",
+        "password":"$2a$12$54NIaqp7j2HYGZCFCxxQO.vjZe33lEo1tEu8FYnelwRoGu7u1speO",
+        "designation":"Assistant Professor",
+        "mobile":"9444033333",
+        "role":"admin"
     }
 
 ]
