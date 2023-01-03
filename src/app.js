@@ -11,10 +11,12 @@ import projectRouter from './routes/project.routes';
 import batchRouter from './routes/batch.routes';
 import studentRouter from './routes/student.routes';
 import panelRouter from './routes/panel.routes';
+import reviewRouter from './routes/review.routes';
 
 import Panel from './models/panel.model';
 import addDummyDataToDB from './utils/addDummyDataToDB';
 import PanelMember from './models/panel-member.model';
+import FacultyAdviser from './models/faculty-adviser.model';
 
 const app = express();
 
@@ -22,7 +24,7 @@ const app = express();
 connectDB();
 
 // add dummy data to db 
-addDummyDataToDB()
+// addDummyDataToDB()
 
 // parse request - incoming data
 app.use(express.json())
@@ -40,6 +42,7 @@ app.use('/api',projectRouter);
 app.use('/api',batchRouter);
 app.use('/api',studentRouter);
 app.use('/api',panelRouter);
+app.use('/api',reviewRouter);
 
 app.get('/', async (req, res) => {
     // await Faculty.create({ username: "faculty", password: "password", name: "Divyanshu",department:'cse',designation:'hod' });
@@ -56,7 +59,8 @@ app.get('/', async (req, res) => {
     // console.log(p);
     const d = await Panel.findOne({where:{panel_id:1},include:[Faculty,{model:PanelMember,include:[{model:Faculty,attributes:{exclude:['password',"faculty_id"]}}]}]});
     const mem = await PanelMember.findAll({where:{panel_id:1},include:[{model:Faculty}]});
-    res.json({ status: true, message: "Our node.js app works",d,mem});
+    const f = await FacultyAdviser.findAll({where:{faculty_id:"100503"},include:[{model:Student}]})
+    res.json({ status: true, message: "Our node.js app works",d,mem,f});
 });
 
 app.listen(PORT, () => console.log(`App listening at port ${PORT}`));

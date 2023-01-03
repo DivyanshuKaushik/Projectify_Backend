@@ -11,6 +11,7 @@ const Faculty = sequelize.define("Faculty", {
     email: {
         type: DataTypes.STRING,
         allowNull: false,
+        unique: true,
     },
     password: {
         type: DataTypes.STRING,
@@ -28,6 +29,10 @@ const Faculty = sequelize.define("Faculty", {
         type: DataTypes.STRING,
         allowNull: false,
     },
+    role:{
+        type: DataTypes.STRING,
+        allowNull: false,
+    }
 });
 
 // // defining one to many relation between faculty and batches table
