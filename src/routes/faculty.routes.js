@@ -3,8 +3,11 @@ import facultyControllers from "../controllers/faculty.controller";
 import { isFaculty } from "../middlewares/auth.middleware";
 
 const router = Router();
-// faculty login 
+// faculty auth routes 
 router.post("/faculty/login",facultyControllers.facultyLogin)
+router.post("/faculty/register",facultyControllers.facultyRegister)
+router.post("/faculty/bulkRegister",facultyControllers.facultyBulkRegister)
+router.patch("/faculty/changePassword",facultyControllers.changePassword)
 
 // get faculty details
 router.get("/faculty",isFaculty,facultyControllers.getFaculty);
