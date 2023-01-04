@@ -1,4 +1,4 @@
-import { generateToken, Response, verifyHash } from "../utils";
+import { generateToken, hash, Response, verifyHash } from "../utils";
 
 import Batch from "../models/batch.model";
 import Student from "../models/student.model";
@@ -29,13 +29,50 @@ const facultyControllers = {
     },
     async facultyRegister(req, res) {
         try {
-            const { faculty_id,email, password, name, mobile, designation } = req.body;
+            let { faculty_id,email, password, name, mobile, designation,role } = req.body;
             const faculty = await Faculty.findOne({ where: { faculty_id } });
             if (faculty) {
                 return res.json(Response(400, "User already exists"));
             }
-            const newFaculty = await Faculty.create({ faculty_id,email, password, name, mobile, designation });
+            password = await hash(password);
+            const newFaculty = await Faculty.create({ faculty_id,email, password, name, mobile, designation,role });
             return res.json(Response(201, "Registration successful"));
+        } catch (error) {
+            return res.status(500).json(Response(500, "Internal Server Error", error));
+        }
+
+    },
+    async facultyBulkRegister(req, res) {
+        try {
+            let  { faculties } = req.body;
+            faculties =  await Promise.all(faculties.map(async (faculty) => {
+                let pass = await hash(faculty.password)
+                return {...faculty,password: pass}
+            }))
+           
+            await Faculty.bulkCreate(faculties);
+            return res.json(Response(201, "Registration successful"));
+        } catch (error) {
+            console.log(error);
+            return res.status(500).json(Response(500, "Internal Server Error", error));
+        }
+
+    },
+    async changePassword(req, res) {
+        try {
+            const { facultyId,oldPassword,newPassword } = req.body;
+            const faculty = await Faculty.findOne({ where: { faculty_id:facultyId } });
+            if (!faculty) {
+                return res.json(Response(400, "User doesn't exist"));
+            }
+            const verifyOldPassword = await verifyHash(oldPassword, faculty.password);
+            if (!verifyOldPassword) {
+                return res.json(Response(400, "Invalid Credentials"));
+            }
+            const newHashedPassword = await hash(newPassword);
+            await Faculty.update({password:newHashedPassword},{where:{faculty_id:facultyId}})
+
+            return res.json(Response(201, "Password Updated successfully"));
         } catch (error) {
             return res.status(500).json(Response(500, "Internal Server Error", error));
         }
