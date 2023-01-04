@@ -4,10 +4,12 @@ import { isAdmin, isFaculty } from "../middlewares/auth.middleware";
 
 const router = Router();
 
-router.get("/reviews", isFaculty,reviewController.getAllReviews)
+router.get("/reviews", isFaculty, reviewController.getAllReviews);
 
-router.get("/review/:id", isFaculty,reviewController.getReviewById)
+router.get("/review/:id", isFaculty, reviewController.getReviewById);
 
-router.post("/review", isAdmin,reviewController.createReview)
+router.get("/reviews/:batch", isFaculty, reviewController.getReviewByBatch);
+
+router.post("/review", isAdmin, reviewController.createReview);
 
 export default router;
