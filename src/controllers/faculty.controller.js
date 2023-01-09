@@ -58,6 +58,19 @@ const facultyControllers = {
         }
 
     },
+    async createFacultyAdvisers(req, res) {
+        try {
+            const {facultyAdvisers} = req.body;
+            if(!facultyAdvisers.length) {
+                return res.status(400).json(Response(400,"Empty facultyAdvisers"));
+            }
+            await FacultyAdviser.bulkCreate(facultyAdvisers)
+            return res.status(200).json(Response(200,"facultyAdvisers created successfully"));
+            
+        } catch (error) {
+            return res.status(500).json(Response(500, "Internal Server Error", error));
+        }
+    },
     async changePassword(req, res) {
         try {
             const { facultyId,oldPassword,newPassword } = req.body;

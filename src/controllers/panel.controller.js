@@ -73,5 +73,31 @@ const panelController = {
                 .json(Response(500, "Internal Server Error", error));
         }
     },
+    async createPanels(req, res) {
+        try {
+            const {panels} = req.body;
+            if(!panels.length) {
+                return res.status(400).json(Response(400,"Empty Panels"));
+            }
+            await Panel.bulkCreate(panels)
+            return res.status(200).json(Response(200,"Panels created successfully"));
+            
+        } catch (error) {
+            return res.status(500).json(Response(500, "Internal Server Error", error));
+        }
+    },
+    async createPanelMembers(req, res) {
+        try {
+            const {panelMembers} = req.body;
+            if(!panelMembers.length) {
+                return res.status(400).json(Response(400,"Empty PanelMembers"));
+            }
+            await PanelMember.bulkCreate(panelMembers)
+            return res.status(200).json(Response(200,"PanelMembers created successfully"));
+            
+        } catch (error) {
+            return res.status(500).json(Response(500, "Internal Server Error", error));
+        }
+    },
 };
 export default panelController;

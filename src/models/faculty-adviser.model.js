@@ -8,6 +8,9 @@ const FacultyAdviser = sequelize.define("FacultyAdviser", {
         primaryKey: true,
         autoIncrement: true,
     },
+    section:{
+        type:DataTypes.STRING
+    }
 });
 
 export default FacultyAdviser;

@@ -46,6 +46,20 @@ const batchController = {
             return res.status(500).json(Response(500, "Internal Server Error", error));
         }
     },
+    async createBatches(req, res) {
+        try {
+            const {batches} = req.body;
+            if(!batches.length) {
+                return res.status(400).json(Response(400,"Empty Batches"));
+            }
+            await Batch.bulkCreate(batches)
+            return res.status(200).json(Response(200,"Batches created successfully"));
+            
+        } catch (error) {
+            return res.status(500).json(Response(500, "Internal Server Error", error));
+        }
+    },
+    
     
 }
 export default batchController

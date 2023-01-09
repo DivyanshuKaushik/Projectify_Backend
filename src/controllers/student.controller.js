@@ -24,6 +24,22 @@ const studentController = {
             return res.status(500).json(Response(500, "Internal Server Error", error));
         }
     },
+    async studentBulkRegister(req, res) {
+        try {
+            let  { students } = req.body;
+            students =  await Promise.all(students.map(async (student) => {
+                let pass = await hash(student.password)
+                return {...student,password: pass}
+            }))
+           
+            await Student.bulkCreate(students);
+            return res.json(Response(201, "Registration successful"));
+        } catch (error) {
+            console.log(error);
+            return res.status(500).json(Response(500, "Internal Server Error", error));
+        }
+
+    },
     async getStudent(req, res) {
         try {
             const {studentId} = req.query;
@@ -50,7 +66,7 @@ const studentController = {
             const {id} = req.params;
            const data = await FacultyAdviser.findOne({where:{student_id:id}});
            const fa = await Faculty.findOne({where:{faculty_id:data.faculty_id}});
-            return res.json(Response(200,"Success",fa));
+            return res.json(Response(200,"Success",{fa:data,faculty:fa}));
         } catch (error) {
             console.log(error);
             return res.status(500).json(Response(500, "Internal Server Error", error));

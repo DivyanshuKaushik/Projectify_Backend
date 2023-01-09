@@ -4,9 +4,8 @@ import Student from "./student.model";
 
 const Batch = sequelize.define("Batch", {
     batch_id:{
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING,
         primaryKey: true,
-        autoIncrement: true,
     },
     remarks:{
         type: DataTypes.STRING,
