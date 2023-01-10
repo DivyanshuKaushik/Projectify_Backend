@@ -1,7 +1,7 @@
 import express, { json } from "express";
 import dotenv from "dotenv";
 import cors from "cors";
-import serverless from 'serverless-http'
+// import serverless from 'serverless-http'
 import { connectDB } from "./db";
 import Batch from "./models/batch.model";
 import Faculty from "./models/faculty.model";
