@@ -3,8 +3,8 @@
     "public": true,
     "builds": [
         {
-            "src": "./src/app.js",
-            "use": "@vercel/node"
+            "src": "src/app.js",
+            "use": "@now/node"
         }
     ],
     "routes": [
