@@ -13,12 +13,13 @@ export default {
     idle: 10000,
   },
 };
+
 // export default {
 //   HOST: "localhost",
 //   PORT: 3306,
 //   USER: "root",
-//   PASSWORD: "rishitshivesh",
-//   DB: "newprojectify",
+//   PASSWORD: "password",
+//   DB: "projectify",
 //   dialect: "mysql",
 //   pool: {
 //     max: 5,

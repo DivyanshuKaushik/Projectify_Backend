@@ -3,6 +3,10 @@ import sequelize from "../db";
 import Student from "./student.model";
 
 const Project = sequelize.define("Project", {
+  id:{
+    type: DataTypes.STRING,
+    primaryKey: true,
+  },
   name: {
     type: DataTypes.STRING,
     allowNull: false,

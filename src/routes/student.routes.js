@@ -10,6 +10,6 @@ router.patch("/student/grade/:id",isFaculty,studentController.updateGrade)
 router.get("/students/batch/:batchId",isFaculty,studentController.getStudentsByBatch)
 
 // bulk create 
-router.post("/students",isAdmin,studentController.studentBulkRegister)
+router.post("/students",studentController.studentBulkRegister)
 
 export default router;

@@ -24,7 +24,7 @@ const app = express();
 connectDB();
 
 // add dummy data to db
-addDummyDataToDB();
+// addDummyDataToDB();
 
 // parse request - incoming data
 app.use(express.json());
@@ -57,7 +57,7 @@ app.get("/", async (req, res) => {
   // res.json({ status: true, message: "Our node.js app works",faculty ,batch,student,project});
   // const p  = await Panel.findAll();
   // console.log(p);
-  const d = await Panel.findOne({
+  const panel_1 = await Panel.findOne({
     where: { panel_id: 1 },
     include: [
       Faculty,
@@ -68,19 +68,12 @@ app.get("/", async (req, res) => {
             model: Faculty,
             attributes: { exclude: ["password", "faculty_id"] },
           },
+          {model:Batch,include:[Student]}
         ],
       },
     ],
   });
-  const mem = await PanelMember.findAll({
-    where: { panel_id: 1 },
-    include: [{ model: Faculty }],
-  });
-  const f = await FacultyAdviser.findAll({
-    where: { faculty_id: "100503" },
-    include: [{ model: Student }],
-  });
-  res.json({ status: true, message: "Our node.js app works", d, mem, f });
+  res.json({ status: true, message: "Our node.js app works", panel_1 });
 });
 
 app.listen(PORT, () => console.log(`App listening at port ${PORT}`));
