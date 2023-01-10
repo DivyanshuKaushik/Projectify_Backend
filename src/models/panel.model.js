@@ -7,7 +7,6 @@ const Panel = sequelize.define("Panel", {
     panel_id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
-        autoIncrement: true,
     },
 });
 export default Panel;
