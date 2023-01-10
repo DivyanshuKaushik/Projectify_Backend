@@ -81,4 +81,4 @@ app.listen(PORT, () => console.log(`App listening at port ${PORT}`));
 // "build": "rimraf dist && babel src --out-dir dist  --copy-files",
 // "build": "rm -rf dist && webpack --mode development",
 
-// export default handler = serverless(app)
+export default handler = serverless(app)
