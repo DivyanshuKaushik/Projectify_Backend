@@ -1,7 +1,6 @@
 {
     "version": 2,
     "public": true,
-    "buildCommand":"npm run build",
     "builds": [
         {
             "src": "dist/app.js",
