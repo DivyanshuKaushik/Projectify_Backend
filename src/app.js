@@ -1,6 +1,7 @@
 import express, { json } from "express";
 import dotenv from "dotenv";
 import cors from "cors";
+import serverless from 'serverless-http'
 import { connectDB } from "./db";
 import Batch from "./models/batch.model";
 import Faculty from "./models/faculty.model";
@@ -79,3 +80,5 @@ app.get("/", async (req, res) => {
 app.listen(PORT, () => console.log(`App listening at port ${PORT}`));
 // "build": "rimraf dist && babel src --out-dir dist  --copy-files",
 // "build": "rm -rf dist && webpack --mode development",
+
+// export default handler = serverless(app)
