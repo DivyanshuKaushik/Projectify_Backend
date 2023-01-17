@@ -26,6 +26,10 @@ const Student = sequelize.define("Student", {
     type: DataTypes.TEXT,
     allowNull: true,
   },
+  graded_by: {
+    type: DataTypes.TEXT,
+    allowNull: true,
+  },
   batch: {
     type: DataTypes.STRING,
     allowNull: false,

@@ -17,11 +17,11 @@ import { hash } from ".";
 
 async function addDummyDataToDB() {
   try {
-    const faculties =  await Promise.all(facultyData.map(async (faculty) => {
-      let pass = await hash(faculty.password)
-      return {...faculty,password: pass}
-  }))
-    await Faculty.bulkCreate(faculties);
+  //   const faculties =  await Promise.all(facultyData.map(async (faculty) => {
+  //     let pass = await hash(faculty.password)
+  //     return {...faculty,password: pass}
+  // }))
+    await Faculty.bulkCreate(facultyData);
     await Panel.bulkCreate(panelData);
     await PanelMember.bulkCreate(panelMemberData);
     const batches = await Promise.all(batchData.map(async batch=>{

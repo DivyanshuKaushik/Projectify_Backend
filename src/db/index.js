@@ -21,8 +21,6 @@ async function connectDB(){
         await sequelize.sync()
         // await sequelize.sync({ force: true })
         console.log("database synced");
-        // const users = await sequelize.query("SELECT * FROM `clients`", { type: QueryTypes.SELECT });
-        // console.log(users);
 
     } catch (error) {
         console.error('Unable to connect to the database:', error);

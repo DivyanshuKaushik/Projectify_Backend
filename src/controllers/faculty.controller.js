@@ -6,6 +6,8 @@ import Project from "../models/project.model";
 import Faculty from "../models/faculty.model";
 import PanelMember from "../models/panel-member.model";
 import FacultyAdviser from "../models/faculty-adviser.model";
+import Panel from "../models/panel.model";
+import Grade from "../models/grade.model";
 
 const facultyControllers = {
     async facultyLogin(req, res) {
@@ -104,9 +106,28 @@ const facultyControllers = {
     async getBatches(req,res) {
         try {
             const {facultyId} = req.query;
-            const data = await PanelMember.findAll({where:{faculty_id:facultyId},include:[{model:Batch,include:[Student]}]})
+            const panel_id = (await PanelMember.findOne({where:{faculty_id:facultyId},attributes:["panel_id"]})).panel_id
+            let data  =  (await Panel.findOne({
+                where: { panel_id },
+                include: [
+                  Faculty,
+                  {
+                    model: PanelMember,
+                    include: [
+                      {
+                        model: Faculty,
+                        attributes: { exclude: ["password", "faculty_id"] },
+                      },
+                      {model:Batch,include:[{model:Student,attributes:{exclude:["password"]}}]}
+                    ],
+                  },
+                ],
+              })).PanelMembers.map((panelMember) => panelMember.Batches);
+              data = data.flat()
+            // const data = await PanelMember.findAll({where:{faculty_id:facultyId},include:[{model:Batch,include:[Student]}]})
             return res.status(200).json(Response(200,"Success",data));
         } catch (error) {
+            console.log(error);
             return res.status(500).json(Response(500,"Internal Server Error",error));
         }
     },

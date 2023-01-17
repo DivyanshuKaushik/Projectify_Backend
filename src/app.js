@@ -18,6 +18,7 @@ import Panel from "./models/panel.model";
 import addDummyDataToDB from "./utils/addDummyDataToDB";
 import PanelMember from "./models/panel-member.model";
 import FacultyAdviser from "./models/faculty-adviser.model";
+import Grade from "./models/grade.model";
 
 const app = express();
 
@@ -69,11 +70,20 @@ app.get("/", async (req, res) => {
             model: Faculty,
             attributes: { exclude: ["password", "faculty_id"] },
           },
-          {model:Batch,include:[Student]}
+          {model:Batch,include:[{model:Student}]}
         ],
       },
     ],
   });
+  // const s = await Student.findOne({
+  //   where: { student_id: "RA1911003010228" },
+  //   include: [
+  //     {
+  //       model: Grade,
+  //     }
+  //   ],
+  // });
+  // console.log(s);
   res.json({ status: true, message: "Our node.js app works", panel_1 });
 });
 

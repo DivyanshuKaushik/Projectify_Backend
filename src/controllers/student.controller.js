@@ -1,6 +1,7 @@
 import Batch from "../models/batch.model";
 import FacultyAdviser from "../models/faculty-adviser.model";
 import Faculty from "../models/faculty.model";
+import Grade from "../models/grade.model";
 import Student from "../models/student.model";
 import { generateToken, Response, verifyHash, hash } from "../utils";
 
@@ -93,12 +94,30 @@ const studentController = {
   async updateGrade(req, res) {
     try {
       const { id } = req.params;
-      const { grade } = req.body;
-      const data = await Student.update(
-        { grade },
+      const { grade,graded_by } = req.body;
+      const findGrade = await Grade.findOne({ where: { id } });
+      if (findGrade) {
+        const data = await Grade.update(
+          {
+            grade,
+            graded_by,
+          },
+          { where: { id } }
+        );
+        return res.json(Response(201, "graded successfully", data));
+      }
+      
+      const data = await Grade.create({
+        id,
+        grade,
+        graded_by,
+      });
+
+      await Student.update(
+        { grade_id: id },
         { where: { student_id: id } }
       );
-      return res.json(Response(200, "Updated grade successfully", data));
+      return res.json(Response(201, "graded successfully", data));
     } catch (error) {
       console.log(error);
       return res
