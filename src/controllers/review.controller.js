@@ -24,7 +24,7 @@ const reviewController = {
   },
   async createReview(req, res) {
     try {
-      const { deadline, batch, phase } = req.body;
+      const { deadline, batch, phase, fields } = req.body;
       const data = await Review.create({
         deadline,
         batch,

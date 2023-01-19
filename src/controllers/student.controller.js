@@ -54,22 +54,21 @@ const studentController = {
   async getStudent(req, res) {
     try {
       const { studentId } = req.query;
-      const user = await Student.findOne({where:{student_id:studentId},include:[
-        {
-          model: Grade,
-          attributes: ["id","grade","phase", "graded_by"],
-          include: [
+      const user = await Student.findOne({
+        where: { student_id: studentId },
+        include: [
+          {
+            model: Grade,
+            attributes: ["id", "grade", "phase", "graded_by"],
+            include: [
               {
-                  model: Faculty,
-                  attributes: [
-                      "name",
-                      "email",
-                      "mobile",
-                  ],
+                model: Faculty,
+                attributes: ["name", "email", "mobile"],
               },
-          ],
-      },
-      ]});
+            ],
+          },
+        ],
+      });
       if (!user) {
         return res.json(Response(400, "User doesn't exist"));
       }
@@ -109,19 +108,20 @@ const studentController = {
   async grade(req, res) {
     try {
       const { studentId } = req.params;
-      const { grade,graded_by,phase } = req.body;
+      const { grade, graded_by, phase } = req.body;
 
-      const gradeExist = await Grade.findOne({where:{phase}})
-      if(gradeExist){
-        return res.status(202).json(Response(202,"Already graded"))
-      }
+      // const gradeExist = await Grade.findOne({ where: { phase } });
+      // console.log(gradeExist);
+      // if (gradeExist) {
+      //   return res.status(202).json(Response(202, "Already graded"));
+      // }
       const data = await Grade.create({
-        student_id:studentId,
+        student_id: studentId,
         grade,
         graded_by,
-        phase
+        phase,
       });
-      
+
       return res.json(Response(201, "graded successfully", data));
     } catch (error) {
       console.log(error);
@@ -133,20 +133,20 @@ const studentController = {
   async updateGrade(req, res) {
     try {
       const { id } = req.params;
-      const { grade,graded_by,phase } = req.body;
+      const { grade, graded_by, phase } = req.body;
       const findGrade = await Grade.findByPk(id);
       if (findGrade) {
         const data = await Grade.update(
           {
             grade,
             graded_by,
-            phase
+            phase,
           },
           { where: { id } }
         );
         return res.json(Response(201, "graded successfully", data));
       }
-      
+
       return res.json(Response(201, "grade not found"));
     } catch (error) {
       console.log(error);
