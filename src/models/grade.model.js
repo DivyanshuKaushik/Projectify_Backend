@@ -12,6 +12,11 @@ const Grade = sequelize.define("Grade", {
     type: DataTypes.TEXT,
     allowNull: true,
   },
+  phase: {
+    type: DataTypes.TEXT,
+    allowNull: true,
+  },
+
 });
 
 Grade.belongsTo(Faculty,{

@@ -47,7 +47,7 @@ Student.hasOne(FacultyAdviser,{
     },
 })
 
-Student.hasOne(Grade,{
+Student.hasMany(Grade,{
     foreignKey: {
         name: "student_id",
         allowNull: true,

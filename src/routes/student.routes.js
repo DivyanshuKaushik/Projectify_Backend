@@ -6,7 +6,8 @@ const router = Router();
 router.post("/student/login",studentController.studentLogin);
 router.get("/student",isFaculty,studentController.getStudent)
 router.get("/student/fa/:id",isFaculty,studentController.getFA)
-router.patch("/student/grade/:studentId",isFaculty,studentController.updateGrade)
+router.post("/student/grade/:studentId",isFaculty,studentController.grade)
+router.put("/student/grade/update/:id",isFaculty,studentController.updateGrade)
 router.get("/students/batch/:batchId",isFaculty,studentController.getStudentsByBatch)
 
 // bulk create 

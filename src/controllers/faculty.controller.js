@@ -126,7 +126,7 @@ const facultyControllers = {
                                         include: [
                                             {
                                                 model: Grade,
-                                                attributes: ["grade", "graded_by"],
+                                                attributes: ["id","grade","phase", "graded_by"],
                                                 include: [
                                                     {
                                                         model: Faculty,

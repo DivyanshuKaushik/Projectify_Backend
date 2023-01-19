@@ -54,7 +54,22 @@ const studentController = {
   async getStudent(req, res) {
     try {
       const { studentId } = req.query;
-      const user = await Student.findByPk(studentId);
+      const user = await Student.findOne({where:{student_id:studentId},include:[
+        {
+          model: Grade,
+          attributes: ["id","grade","phase", "graded_by"],
+          include: [
+              {
+                  model: Faculty,
+                  attributes: [
+                      "name",
+                      "email",
+                      "mobile",
+                  ],
+              },
+          ],
+      },
+      ]});
       if (!user) {
         return res.json(Response(400, "User doesn't exist"));
       }
@@ -91,29 +106,48 @@ const studentController = {
         .json(Response(500, "Internal Server Error", error));
     }
   },
-  async updateGrade(req, res) {
+  async grade(req, res) {
     try {
       const { studentId } = req.params;
-      const { grade,graded_by } = req.body;
-      const findGrade = await Grade.findOne({ where: { student_id:studentId } });
+      const { grade,graded_by,phase } = req.body;
+
+      const gradeExist = await Grade.findOne({where:{phase}})
+      if(gradeExist){
+        return res.status(202).json(Response(202,"Already graded"))
+      }
+      const data = await Grade.create({
+        student_id:studentId,
+        grade,
+        graded_by,
+        phase
+      });
+      
+      return res.json(Response(201, "graded successfully", data));
+    } catch (error) {
+      console.log(error);
+      return res
+        .status(500)
+        .json(Response(500, "Internal Server Error", error));
+    }
+  },
+  async updateGrade(req, res) {
+    try {
+      const { id } = req.params;
+      const { grade,graded_by,phase } = req.body;
+      const findGrade = await Grade.findByPk(id);
       if (findGrade) {
         const data = await Grade.update(
           {
             grade,
             graded_by,
+            phase
           },
-          { where: { student_id:studentId } }
+          { where: { id } }
         );
         return res.json(Response(201, "graded successfully", data));
       }
       
-      const data = await Grade.create({
-        student_id:studentId,
-        grade,
-        graded_by,
-      });
-      
-      return res.json(Response(201, "graded successfully", data));
+      return res.json(Response(201, "grade not found"));
     } catch (error) {
       console.log(error);
       return res
