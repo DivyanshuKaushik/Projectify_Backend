@@ -1,10 +1,10 @@
-import facultyData from "../../dummy/faculty.json";
-import facultyAdviserData from "../../dummy/faculty-adviser.json";
-import batchData from "../../dummy/batches.json";
-import studentData from "../../dummy/students.json";
-import projectData from "../../dummy/projects.json";
-import panelData from "../../dummy/panel.json";
-import panelMemberData from "../../dummy/panel-members.json";
+import facultyData from "../dummy/faculty.json";
+import facultyAdviserData from "../dummy/faculty-adviser.json";
+import batchData from "../dummy/batches.json";
+import studentData from "../dummy/students.json";
+import projectData from "../dummy/projects.json";
+import panelData from "../dummy/panel.json";
+import panelMemberData from "../dummy/panel-members.json";
 // models import 
 import Faculty from "../models/faculty.model";
 import Panel from "../models/panel.model";

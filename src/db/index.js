@@ -1,5 +1,5 @@
 import { QueryTypes, Sequelize } from "sequelize";
-import dbConfig from "../../config/db.config";
+import dbConfig from "../config/db.config";
 
 const sequelize = new Sequelize(dbConfig.DB, dbConfig.USER, dbConfig.PASSWORD, {
     host: dbConfig.HOST,
