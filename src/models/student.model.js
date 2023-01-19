@@ -1,5 +1,7 @@
 import { DataTypes } from "sequelize";
 import sequelize from "../db";
+import FacultyAdviser from "./faculty-adviser.model";
+import Grade from "./grade.model";
 
 const Student = sequelize.define("Student", {
   student_id: {
@@ -22,14 +24,14 @@ const Student = sequelize.define("Student", {
     type: DataTypes.STRING,
     allowNull: false,
   },
-  grade: {
-    type: DataTypes.TEXT,
-    allowNull: true,
-  },
-  graded_by: {
-    type: DataTypes.TEXT,
-    allowNull: true,
-  },
+  // grade: {
+  //   type: DataTypes.TEXT,
+  //   allowNull: true,
+  // },
+  // graded_by: {
+  //   type: DataTypes.TEXT,
+  //   allowNull: true,
+  // },
   batch: {
     type: DataTypes.STRING,
     allowNull: false,
@@ -37,3 +39,17 @@ const Student = sequelize.define("Student", {
 });
 
 export default Student;
+
+Student.hasOne(FacultyAdviser,{
+    foreignKey: {
+        name: "student_id",
+        allowNull: true,
+    },
+})
+
+Student.hasOne(Grade,{
+    foreignKey: {
+        name: "student_id",
+        allowNull: true,
+    },
+})

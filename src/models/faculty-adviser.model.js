@@ -4,21 +4,21 @@ import Student from "./student.model";
 
 const FacultyAdviser = sequelize.define("FacultyAdviser", {
     id: {
-        type: DataTypes.INTEGER,
         primaryKey: true,
+        type: DataTypes.INTEGER,
         autoIncrement: true,
     },
-    section:{
-        type:DataTypes.STRING
-    }
+    section: {
+        type: DataTypes.STRING,
+    },
 });
 
 export default FacultyAdviser;
 
-// each student has one faculty adviser 
-FacultyAdviser.belongsTo(Student,{
-    foreignKey: {
-        name: "student_id",
-    },
-})
-
+// each student has one faculty adviser
+// FacultyAdviser.belongsTo(Student,{
+//     foreignKey: {
+//         name: "student_id",
+//         allowNull: true,
+//     },
+// })

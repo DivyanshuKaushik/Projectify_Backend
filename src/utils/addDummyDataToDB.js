@@ -31,7 +31,16 @@ async function addDummyDataToDB() {
     await Batch.bulkCreate(batches);
     await Project.bulkCreate(projectData);
     await Student.bulkCreate(studentData);
-    // await FacultyAdviser.bulkCreate(facultyAdviserData);
+    await FacultyAdviser.bulkCreate(facultyAdviserData);
+    // await Promise.all( facultyAdviserData.forEach(async (facultyAdviser) => {
+    //   try {
+    //     await FacultyAdviser.create(facultyAdviser)
+        
+    //   } catch (error) {
+    //       console.log(facultyAdviser);
+    //   }
+
+    // }))
     // console.log("Created Admin Account");
   } catch (err) {
     console.error(err);

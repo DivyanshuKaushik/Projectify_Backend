@@ -1,26 +1,24 @@
 import { DataTypes } from "sequelize";
 import sequelize from "../db";
 import Faculty from "./faculty.model";
-import Student from "./student.model";
 
 const Grade = sequelize.define("Grade", {
   id: {
     primaryKey: true,
-    type: DataTypes.STRING,
+    type: DataTypes.INTEGER,
+    autoIncrement: true,
   },
   grade: {
     type: DataTypes.TEXT,
     allowNull: true,
   },
-  graded_by: {
-    type: DataTypes.TEXT,
-    allowNull: true,
-  }
 });
 
-Grade.hasOne(Student,{
+Grade.belongsTo(Faculty,{
     foreignKey: {
-        name: "grade_id",
+        name: "graded_by",
+        allowNull: true,
     },
 })
+
 export default Grade;

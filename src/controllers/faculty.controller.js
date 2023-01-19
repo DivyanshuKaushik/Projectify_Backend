@@ -110,17 +110,40 @@ const facultyControllers = {
             let data  =  (await Panel.findOne({
                 where: { panel_id },
                 include: [
-                  Faculty,
-                  {
-                    model: PanelMember,
-                    include: [
-                      {
-                        model: Faculty,
-                        attributes: { exclude: ["password", "faculty_id"] },
-                      },
-                      {model:Batch,include:[{model:Student,attributes:{exclude:["password"]}}]}
-                    ],
-                  },
+                    Faculty,
+                    {
+                        model: PanelMember,
+                        include: [
+                            {
+                                model: Faculty,
+                                attributes: { exclude: ["password", "faculty_id"] },
+                            },
+                            {
+                                model: Batch,
+                                include: [
+                                    {
+                                        model: Student,
+                                        include: [
+                                            {
+                                                model: Grade,
+                                                attributes: ["grade", "graded_by"],
+                                                include: [
+                                                    {
+                                                        model: Faculty,
+                                                        attributes: [
+                                                            "name",
+                                                            "email",
+                                                            "mobile",
+                                                        ],
+                                                    },
+                                                ],
+                                            },
+                                        ],
+                                    },
+                                ],
+                            },
+                        ],
+                    },
                 ],
               })).PanelMembers.map((panelMember) => panelMember.Batches);
               data = data.flat()

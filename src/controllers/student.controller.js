@@ -93,30 +93,26 @@ const studentController = {
   },
   async updateGrade(req, res) {
     try {
-      const { id } = req.params;
+      const { studentId } = req.params;
       const { grade,graded_by } = req.body;
-      const findGrade = await Grade.findOne({ where: { id } });
+      const findGrade = await Grade.findOne({ where: { student_id:studentId } });
       if (findGrade) {
         const data = await Grade.update(
           {
             grade,
             graded_by,
           },
-          { where: { id } }
+          { where: { student_id:studentId } }
         );
         return res.json(Response(201, "graded successfully", data));
       }
       
       const data = await Grade.create({
-        id,
+        student_id:studentId,
         grade,
         graded_by,
       });
-
-      await Student.update(
-        { grade_id: id },
-        { where: { student_id: id } }
-      );
+      
       return res.json(Response(201, "graded successfully", data));
     } catch (error) {
       console.log(error);

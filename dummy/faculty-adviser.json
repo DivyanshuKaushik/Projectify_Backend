@@ -2645,11 +2645,6 @@
   "faculty_id": 100506
  },
  {
-  "student_id": "RA1911003010558",
-  "section": "I1",
-  "faculty_id": 100506
- },
- {
   "student_id": "RA1911003010559",
   "section": "I1",
   "faculty_id": 100506
@@ -3091,11 +3086,6 @@
  },
  {
   "student_id": "RA1911003010651",
-  "section": "B2",
-  "faculty_id": 102085
- },
- {
-  "student_id": "RA1911003010652",
   "section": "B2",
   "faculty_id": 102085
  },
@@ -4826,11 +4816,6 @@
  },
  {
   "student_id": "RA1911003011026",
-  "section": "H2",
-  "faculty_id": 102687
- },
- {
-  "student_id": "RA1911003011027",
   "section": "H2",
   "faculty_id": 102687
  },
