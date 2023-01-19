@@ -29,6 +29,7 @@ const reviewController = {
         deadline,
         batch,
         phase,
+        fields,
       });
       return res.json(Response(200, "Review created successfully", data));
     } catch (error) {
