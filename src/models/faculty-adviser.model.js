@@ -16,9 +16,9 @@ const FacultyAdviser = sequelize.define("FacultyAdviser", {
 export default FacultyAdviser;
 
 // each student has one faculty adviser
-// FacultyAdviser.belongsTo(Student,{
-//     foreignKey: {
-//         name: "student_id",
-//         allowNull: true,
-//     },
-// })
+FacultyAdviser.belongsTo(Student,{
+    foreignKey: {
+        name: "student_id",
+        allowNull: true,
+    },
+})

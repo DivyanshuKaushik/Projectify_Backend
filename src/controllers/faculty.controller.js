@@ -120,7 +120,7 @@ const facultyControllers = {
                             },
                             {
                                 model: Batch,
-                                include: [
+                                include: [{model:Faculty,as:'guide'},
                                     {
                                         model: Student,
                                         include: [

@@ -40,12 +40,12 @@ const Student = sequelize.define("Student", {
 
 export default Student;
 
-Student.hasOne(FacultyAdviser,{
-    foreignKey: {
-        name: "student_id",
-        allowNull: true,
-    },
-})
+// Student.hasOne(FacultyAdviser,{
+//     foreignKey: {
+//         name: "student_id",
+//         allowNull: true,
+//     },
+// })
 
 Student.hasMany(Grade,{
     foreignKey: {

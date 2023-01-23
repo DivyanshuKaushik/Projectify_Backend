@@ -2,6 +2,7 @@ import { DataTypes } from "sequelize";
 import sequelize from "../db";
 import Batch from "./batch.model";
 import FacultyAdviser from "./faculty-adviser.model";
+import Grade from "./grade.model";
 
 const Faculty = sequelize.define("Faculty", {
     faculty_id: {
@@ -35,16 +36,24 @@ const Faculty = sequelize.define("Faculty", {
     }
 });
 
-// // defining one to many relation between faculty and batches table
+// defining one to many relation between faculty and batches table as guide
 // Faculty.hasMany(Batch, {
 //     foreignKey: {
-//         name: "facultyId",
-//         allowNull: true,
-//         // onDelete: "CASCADE",
-//         // onUpdate: "CASCADE",
+//         name: "guide_id",
 //     },
 // });
-
+// Faculty.hasOne(Grade,{
+//     foreignKey: {
+//         name: "graded_by",
+//         allowNull: true,
+//     },
+// })
+Grade.belongsTo(Faculty,{
+    foreignKey: {
+        name: "graded_by",
+        allowNull: true,
+    },
+})
 // one facuty adviser can have many students - populate faculty_adviser table
 Faculty.hasMany(FacultyAdviser,{
     foreignKey: {

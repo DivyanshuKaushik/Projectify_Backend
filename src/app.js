@@ -19,8 +19,11 @@ import addDummyDataToDB from "./utils/addDummyDataToDB";
 import PanelMember from "./models/panel-member.model";
 import FacultyAdviser from "./models/faculty-adviser.model";
 import Grade from "./models/grade.model";
-
+import sequalize from "./db";
 const app = express();
+
+// dotenv config - loading env secrets
+dotenv.config();
 
 // connect to database
 connectDB();
@@ -33,9 +36,6 @@ app.use(express.json());
 
 // cors config
 app.use(cors());
-
-// dotenv config - loading env secrets
-dotenv.config();
 
 const PORT = process.env.PORT || 4000;
 
@@ -72,7 +72,7 @@ app.get("/", async (req, res) => {
                     },
                     {
                         model: Batch,
-                        include: [
+                        include: [{model:Faculty,as:'guide'},
                             {
                                 model: Student,
                                 include: [
@@ -107,7 +107,10 @@ app.get("/", async (req, res) => {
             },
         ],
     });
-    res.json({ status: true, message: "Our node.js app works", s, panel_1 });
+    // const t = await FacultyAdviser.findAll({where:{faculty_id:"102463"},attributes:{include:[
+    //     sequalize.literal(`SELECT name FROM Students WHERE Students.student_id = FacultyAdviser.student_id`)
+    // ]}})
+    res.json({ status: true, message: "Our node.js app works",s, panel_1 });
 });
 
 app.listen(PORT, () => console.log(`App listening at port ${PORT}`));

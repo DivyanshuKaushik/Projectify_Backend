@@ -19,11 +19,11 @@ const Grade = sequelize.define("Grade", {
 
 });
 
-Grade.belongsTo(Faculty,{
-    foreignKey: {
-        name: "graded_by",
-        allowNull: true,
-    },
-})
+// Grade.belongsTo(Faculty,{
+//     foreignKey: {
+//         name: "graded_by",
+//         allowNull: true,
+//     },
+// })
 
 export default Grade;
