@@ -53,6 +53,20 @@ const reviewController = {
         .json(Response(500, "Internal Server Error", error));
     }
   },
+  async deleteReview(req, res) {
+    try {
+      const data = await Review.destroy({
+        where: {
+          id: req.params.id,
+        },
+      });
+      return res.json(Response(200, "Review deleted successfully", data));
+    } catch (error) {
+      return res
+        .status(500)
+        .json(Response(500, "Internal Server Error", error));
+    }
+  },
 };
 
 export default reviewController;

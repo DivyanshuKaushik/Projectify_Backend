@@ -12,4 +12,6 @@ router.get("/reviews/:batch", isFaculty, reviewController.getReviewByBatch);
 
 router.post("/review", isAdmin, reviewController.createReview);
 
+router.delete("/review/:id", isAdmin, reviewController.deleteReview);
+
 export default router;

@@ -47,70 +47,67 @@ app.use("/api", panelRouter);
 app.use("/api", reviewRouter);
 
 app.get("/", async (req, res) => {
-    // await Faculty.create({ username: "faculty", password: "password", name: "Divyanshu",department:'cse',designation:'hod' });
-    // await Batch.create({ status: "status", report: "report", facultyId:2 });
-    // await Project.create({ name: "ProjectX1",comments:'comments' },{include:[Student]});
-    // await Student.create({ username: "abhijeet", password: "password", name: "Abhijeet",sec:'A',batchId:1,projectId:1 });
-    // const student = await Student.findAll();
-    // const faculty = await Faculty.findAll();
-    // const batch = await Batch.findAll();
-    // const project = await Project.findAll();
-    // // console.log("Jane's auto-generated ID:", jane.id);
-    // res.json({ status: true, message: "Our node.js app works",faculty ,batch,student,project});
-    // const p  = await Panel.findAll();
-    // console.log(p);
-    const panel_1 = await Panel.findOne({
-        where: { panel_id: 1 },
+  // await Faculty.create({ username: "faculty", password: "password", name: "Divyanshu",department:'cse',designation:'hod' });
+  // await Batch.create({ status: "status", report: "report", facultyId:2 });
+  // await Project.create({ name: "ProjectX1",comments:'comments' },{include:[Student]});
+  // await Student.create({ username: "abhijeet", password: "password", name: "Abhijeet",sec:'A',batchId:1,projectId:1 });
+  // const student = await Student.findAll();
+  // const faculty = await Faculty.findAll();
+  // const batch = await Batch.findAll();
+  // const project = await Project.findAll();
+  // // console.log("Jane's auto-generated ID:", jane.id);
+  // res.json({ status: true, message: "Our node.js app works",faculty ,batch,student,project});
+  // const p  = await Panel.findAll();
+  // console.log(p);
+  const panel_1 = await Panel.findOne({
+    where: { panel_id: 1 },
+    include: [
+      Faculty,
+      {
+        model: PanelMember,
         include: [
-            Faculty,
-            {
-                model: PanelMember,
+          {
+            model: Faculty,
+            attributes: { exclude: ["password", "faculty_id"] },
+          },
+          {
+            model: Batch,
+            include: [
+              { model: Faculty, as: "guide" },
+              {
+                model: Student,
                 include: [
-                    {
+                  {
+                    model: Grade,
+                    attributes: ["grade", "graded_by"],
+                    include: [
+                      {
                         model: Faculty,
-                        attributes: { exclude: ["password", "faculty_id"] },
-                    },
-                    {
-                        model: Batch,
-                        include: [{model:Faculty,as:'guide'},
-                            {
-                                model: Student,
-                                include: [
-                                    {
-                                        model: Grade,
-                                        attributes: ["grade", "graded_by"],
-                                        include: [
-                                            {
-                                                model: Faculty,
-                                                attributes: [
-                                                    "name",
-                                                    "email",
-                                                    "mobile",
-                                                ],
-                                            },
-                                        ],
-                                    },
-                                ],
-                            },
-                        ],
-                    },
+                        attributes: ["name", "email", "mobile"],
+                      },
+                    ],
+                  },
                 ],
-            },
+              },
+            ],
+          },
         ],
-    });
-    const s = await Student.findOne({
-        where: { student_id: "RA1911003010228" },
-        include: [
-            {
-                model: Grade,
-                include: [Faculty],
-            },
-        ],
-    });
-    // const t = await FacultyAdviser.findAll({where:{faculty_id:"102463"},attributes:{include:[
-    //     sequalize.literal(`SELECT name FROM Students WHERE Students.student_id = FacultyAdviser.student_id`)
-    // ]}})
-    res.json({ status: true, message: "Our node.js app works",s, panel_1 });
+      },
+    ],
+  });
+  const s = await Student.findOne({
+    where: { student_id: "RA1911003010228" },
+    include: [
+      {
+        model: Grade,
+        include: [Faculty],
+      },
+    ],
+  });
+  // const t = await FacultyAdviser.findAll({where:{faculty_id:"102463"},attributes:{include:[
+  //     sequalize.literal(`SELECT name FROM Students WHERE Students.student_id = FacultyAdviser.student_id`)
+  // ]}})
+  res.json({ status: true, message: "Our node.js app works", s, panel_1 });
 });
 
 app.listen(PORT, () => console.log(`App listening at port ${PORT}`));
