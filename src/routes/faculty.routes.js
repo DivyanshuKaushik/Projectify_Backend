@@ -40,4 +40,6 @@ router.get(
 
 router.patch("/admin/data/flush", isFaculty, facultyControllers.flushDatabase);
 
+router.patch("/admin/data/clear", isFaculty, facultyControllers.clearDatabase);
+
 export default router;

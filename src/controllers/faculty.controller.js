@@ -10,6 +10,7 @@ import Panel from "../models/panel.model";
 import Grade from "../models/grade.model";
 import { flushDB } from "../db";
 import addDummyDataToDB from "../utils/addDummyDataToDB";
+import addAdmin from "../utils/addAdmin";
 import db from "../db/index";
 const facultyControllers = {
   async facultyLogin(req, res) {
@@ -236,6 +237,24 @@ const facultyControllers = {
       await flushDB();
       await addDummyDataToDB();
       return res.status(200).json(Response(200, "Data Flush Success"));
+    } catch (error) {
+      return res
+        .status(500)
+        .json(Response(500, "Internal Server Error", error));
+    }
+  },
+
+  async clearDatabase(req, res) {
+    const { faculty_id } = req.body;
+    console.log(faculty_id);
+    if (faculty_id != 100198)
+      return res.status(401).json(Response(401, "Unauthorized"));
+    try {
+      await flushDB();
+      await addAdmin();
+      return res
+        .status(200)
+        .json(Response(200, "Data Cleared and Admin Added"));
     } catch (error) {
       return res
         .status(500)
