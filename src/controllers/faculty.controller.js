@@ -10,7 +10,7 @@ import Panel from "../models/panel.model";
 import Grade from "../models/grade.model";
 import { flushDB } from "../db";
 import addDummyDataToDB from "../utils/addDummyDataToDB";
-
+import db from "../db/index";
 const facultyControllers = {
   async facultyLogin(req, res) {
     try {
@@ -196,10 +196,29 @@ const facultyControllers = {
   async getStudentsByFaculty(req, res) {
     try {
       const { facultyId } = req.query;
+
       const data = await FacultyAdviser.findAll({
         where: { faculty_id: facultyId },
-        include: [{ model: Student, attributes: { exclude: ["password"] } }],
+        include: [
+          {
+            model: Student,
+            attributes: { exclude: ["password"] },
+            include: [
+              {
+                model: Grade,
+                include: [
+                  {
+                    model: Faculty,
+                    attributes: ["name", "email", "mobile"],
+                  },
+                ],
+              },
+            ],
+          },
+        ],
       });
+
+      // console.log(data);
       return res.status(200).json(Response(200, "Success", data));
     } catch (error) {
       return res
