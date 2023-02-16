@@ -27,6 +27,10 @@ const Project = _db.default.define("Project", {
   comments: {
     type: _sequelize.DataTypes.TEXT,
     allowNull: false
+  },
+  sdg_id: {
+    type: _sequelize.DataTypes.INTEGER,
+    allowNull: true
   }
 });
 
@@ -40,7 +44,7 @@ Project.hasMany(_student.default, {
 });
 Project.hasOne(_sdg.default, {
   foreignKey: {
-    name: "id",
+    name: "sdg_id",
     allowNull: true
   }
 });

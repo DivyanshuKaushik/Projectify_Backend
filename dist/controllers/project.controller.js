@@ -11,6 +11,8 @@ var _sdg = _interopRequireDefault(require("../models/sdg.model"));
 
 var _utils = require("../utils");
 
+var _db = _interopRequireDefault(require("../db"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const projectController = {
@@ -18,12 +20,24 @@ const projectController = {
     try {
       const {
         id
-      } = req.params;
+      } = req.params; // find project by pk and include sdg by sdg_id of the project
+
       const project = await _project.default.findByPk(id, {
         include: {
-          model: _sdg.default
+          model: _sdg.default,
+          where: {
+            id: _db.default.col("Project.sdg_id")
+          }
         }
-      });
+      }); // const project = await Project.findByPk(id, {
+      //   include: {
+      //     model: Sdg,
+      //     where: {
+      //       id: sequelize.col("Project.sdg_id"),
+      //     },
+      //   },
+      // });
+
       return res.status(200).json((0, _utils.Response)(200, "Success", project));
     } catch (error) {
       return res.status(500).json((0, _utils.Response)(500, "Internal Server Error", error));
@@ -98,7 +112,13 @@ const projectController = {
 
       if (!id, !sdg_id) {
         return res.status(400).json((0, _utils.Response)(400, "Id and sdg_id are required"));
-      }
+      } // const sdg = await Sdg.findByPk(sdg_id);
+      // const project = await Project.update({ sdg_id }, { where: { id } });
+      // const project = await Project.findByPk(id);
+      // project.sdg_id = sdg_id;
+      // project.Sdg = sdg;
+      // await project.save();
+
 
       const project = await _project.default.update({
         sdg_id

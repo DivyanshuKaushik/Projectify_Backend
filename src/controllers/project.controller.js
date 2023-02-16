@@ -1,13 +1,29 @@
 import Project from "../models/project.model";
 import Sdg from "../models/sdg.model";
 import { Response } from "../utils";
-
+import db from "../db";
 const projectController = {
   async getProjectById(req, res) {
     try {
       const { id } = req.params;
-      const project = await Project.findByPk(id, { include: { model: Sdg } });
-      return res.status(200).json(Response(200, "Success", project));
+      // find project by pk and include sdg by sdg_id of the project
+      // const project = await Promise.all(
+      //   const a = await Project.findByPk(id}
+      // )
+      const project = await Project.findByPk(id);
+      const sdg = await Sdg.findByPk(project.sdg_id);
+      // const project = await Project.findByPk(id, {
+      //   include: {
+      //     model: Sdg,
+      //     where: {
+      //       id: sequelize.col("Project.sdg_id"),
+      //     },
+      //   },
+      // });
+      console.log(project, sdg);
+      return res
+        .status(200)
+        .json(Response(200, "Success", { ...project.dataValues, sdg }));
     } catch (error) {
       return res
         .status(500)
@@ -68,6 +84,12 @@ const projectController = {
           .status(400)
           .json(Response(400, "Id and sdg_id are required"));
       }
+      // const sdg = await Sdg.findByPk(sdg_id);
+      // const project = await Project.update({ sdg_id }, { where: { id } });
+      // const project = await Project.findByPk(id);
+      // project.sdg_id = sdg_id;
+      // project.Sdg = sdg;
+      // await project.save();
       const project = await Project.update({ sdg_id }, { where: { id } });
       return res
         .status(200)

@@ -28,11 +28,9 @@ const sequelize = new _sequelize.Sequelize(_db.default.DB, _db.default.USER, _db
 async function connectDB() {
   try {
     await sequelize.authenticate();
-    console.log("Connection has been established successfully."); // await sequelize.sync();
+    console.log("Connection has been established successfully.");
+    await sequelize.sync(); // await sequelize.sync({ force: true });
 
-    await sequelize.sync({
-      force: true
-    });
     console.log("database synced");
   } catch (error) {
     console.error("Unable to connect to the database:", error);

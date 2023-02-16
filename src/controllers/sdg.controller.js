@@ -26,7 +26,7 @@ const sdgController = {
   },
   async createSdg(req, res) {
     try {
-      const { title, description } = req.body;
+      const { objective, description } = req.body;
       if (!title || !description) {
         return res.status(400).json(Response(400, "Empty sdg"));
       }
@@ -40,7 +40,7 @@ const sdgController = {
   },
   async updateSdg(req, res) {
     try {
-      const { id, title, description } = req.body;
+      const { id, objective, description } = req.body;
       if ((!id, !description, !title)) {
         return res.status(400).json(Response(400, "Id and name are required"));
       }

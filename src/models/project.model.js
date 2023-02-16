@@ -16,6 +16,10 @@ const Project = sequelize.define("Project", {
     type: DataTypes.TEXT,
     allowNull: false,
   },
+  sdg_id: {
+    type: DataTypes.INTEGER,
+    allowNull: true,
+  },
 });
 Project.hasMany(Student, {
   foreignKey: {
@@ -28,7 +32,7 @@ Project.hasMany(Student, {
 
 Project.hasOne(Sdg, {
   foreignKey: {
-    name: "id",
+    name: "sdg_id",
     allowNull: true,
   },
 });

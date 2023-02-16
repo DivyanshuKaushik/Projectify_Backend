@@ -28,6 +28,8 @@ var _panel = _interopRequireDefault(require("./routes/panel.routes"));
 
 var _review = _interopRequireDefault(require("./routes/review.routes"));
 
+var _sdg = _interopRequireDefault(require("./routes/sdg.routes"));
+
 var _panel2 = _interopRequireDefault(require("./models/panel.model"));
 
 var _addDummyDataToDB = _interopRequireDefault(require("./utils/addDummyDataToDB"));
@@ -64,6 +66,7 @@ app.use("/api", _batch2.default);
 app.use("/api", _student2.default);
 app.use("/api", _panel.default);
 app.use("/api", _review.default);
+app.use("/api", _sdg.default);
 app.get("/", async (req, res) => {
   // await Faculty.create({ username: "faculty", password: "password", name: "Divyanshu",department:'cse',designation:'hod' });
   // await Batch.create({ status: "status", report: "report", facultyId:2 });

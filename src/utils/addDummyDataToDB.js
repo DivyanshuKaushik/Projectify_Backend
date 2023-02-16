@@ -6,6 +6,7 @@ import studentData from "../dummy/students.json";
 import projectData from "../dummy/projects.json";
 import panelData from "../dummy/panel.json";
 import panelMemberData from "../dummy/panel-members.json";
+import sdgData from "../dummy/sdgs.json";
 // models import
 import Faculty from "../models/faculty.model";
 import Panel from "../models/panel.model";
@@ -14,6 +15,7 @@ import Batch from "../models/batch.model";
 import Project from "../models/project.model";
 import Student from "../models/student.model";
 import FacultyAdviser from "../models/faculty-adviser.model";
+import Sdg from "../models/sdg.model";
 import { hash } from ".";
 
 async function addDummyDataToDB() {
@@ -38,6 +40,7 @@ async function addDummyDataToDB() {
     await Project.bulkCreate(projectData);
     await Student.bulkCreate(studentData);
     await FacultyAdviser.bulkCreate(facultyAdviserData);
+    await Sdg.bulkCreate(sdgData);
     // await Promise.all( facultyAdviserData.forEach(async (facultyAdviser) => {
     //   try {
     //     await FacultyAdviser.create(facultyAdviser)

@@ -1,0 +1,70 @@
+[
+  {
+    "objective": "No Poverty",
+    "description": "By 2030, eradicate extreme poverty for all people everywhere."
+  },
+  {
+    "objective": "Zero Hunger",
+    "description": "End hunger, achieve food security and improved nutrition by 2030."
+  },
+  {
+    "objective": "Good Health and Well-being",
+    "description": "Ensure healthy lives and promote well-being for all at all ages by 2030."
+  },
+  {
+    "objective": "Quality Education",
+    "description": "Ensure that all girls and boys complete free, equitable and quality primary and secondary education by 2030."
+  },
+  {
+    "objective": "Gender Equality",
+    "description": "To achieve gender equality and empower all women and girls."
+  },
+  {
+    "objective": "Clean Water and Sanitation",
+    "description": "Ensure availability and sustainable management of water and sanitation for all by 2030."
+  },
+  {
+    "objective": "Affordable and Clean Energy",
+    "description": "Ensure access to affordable, reliable, sustainable and modern energy for all by 2030."
+  },
+  {
+    "objective": "Decent Work and Economic Growth",
+    "description": "Promote sustained, inclusive and sustainable economic growth."
+  },
+  {
+    "objective": "Industry, Innovation and Infrastructure",
+    "description": "Build resilient infrastructure, promote inclusive and sustainable industrialization and foster innovation by 2030."
+  },
+  {
+    "objective": "Reduced Inequality",
+    "description": "Reduce inequality within and among countries by 2030."
+  },
+  {
+    "objective": "Sustainable Cities and Communities",
+    "description": "Make cities and human settlements inclusive, safe, resilient and sustainable."
+  },
+  {
+    "objective": "Responsible Consumption and Production",
+    "description": "Ensure sustainable consumption and production patterns."
+  },
+  {
+    "objective": "Climate Action",
+    "description": "Take urgent action to combat climate change and its impacts."
+  },
+  {
+    "objective": "Life Below Water",
+    "description": "Conserve and sustainably use the oceans, seas and marine resources for sustainable development."
+  },
+  {
+    "objective": "Life on Land",
+    "description": "Protect, restore and promote sustainable use of terrestrial ecosystems, combat desertification and halt biodiversity loss."
+  },
+  {
+    "objective": "Peace and Justice Strong Institutions",
+    "description": "Promote peaceful and inclusive societies for sustainable development; provide access to justice for all."
+  },
+  {
+    "objective": "Partnerships to achieve the Goal",
+    "description": "Strengthen the means of implementation and revitalize the global partnership for sustainable development."
+  }
+]

@@ -21,6 +21,8 @@ var _panel = _interopRequireDefault(require("../dummy/panel.json"));
 
 var _panelMembers = _interopRequireDefault(require("../dummy/panel-members.json"));
 
+var _sdgs = _interopRequireDefault(require("../dummy/sdgs.json"));
+
 var _faculty2 = _interopRequireDefault(require("../models/faculty.model"));
 
 var _panel2 = _interopRequireDefault(require("../models/panel.model"));
@@ -34,6 +36,8 @@ var _project = _interopRequireDefault(require("../models/project.model"));
 var _student = _interopRequireDefault(require("../models/student.model"));
 
 var _facultyAdviser2 = _interopRequireDefault(require("../models/faculty-adviser.model"));
+
+var _sdg = _interopRequireDefault(require("../models/sdg.model"));
 
 var _ = require(".");
 
@@ -68,7 +72,8 @@ async function addDummyDataToDB() {
     await _batch.default.bulkCreate(batches);
     await _project.default.bulkCreate(_projects.default);
     await _student.default.bulkCreate(_students.default);
-    await _facultyAdviser2.default.bulkCreate(_facultyAdviser.default); // await Promise.all( facultyAdviserData.forEach(async (facultyAdviser) => {
+    await _facultyAdviser2.default.bulkCreate(_facultyAdviser.default);
+    await _sdg.default.bulkCreate(_sdgs.default); // await Promise.all( facultyAdviserData.forEach(async (facultyAdviser) => {
     //   try {
     //     await FacultyAdviser.create(facultyAdviser)
     //   } catch (error) {

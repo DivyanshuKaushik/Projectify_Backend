@@ -13,6 +13,7 @@ import batchRouter from "./routes/batch.routes";
 import studentRouter from "./routes/student.routes";
 import panelRouter from "./routes/panel.routes";
 import reviewRouter from "./routes/review.routes";
+import sdgRouter from "./routes/sdg.routes";
 
 import Panel from "./models/panel.model";
 import addDummyDataToDB from "./utils/addDummyDataToDB";
@@ -45,6 +46,7 @@ app.use("/api", batchRouter);
 app.use("/api", studentRouter);
 app.use("/api", panelRouter);
 app.use("/api", reviewRouter);
+app.use("/api", sdgRouter);
 
 app.get("/", async (req, res) => {
   // await Faculty.create({ username: "faculty", password: "password", name: "Divyanshu",department:'cse',designation:'hod' });

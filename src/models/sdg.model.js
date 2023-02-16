@@ -3,7 +3,7 @@ import sequelize from "../db";
 
 const Sdg = sequelize.define("Sdg", {
   id: {
-    type: DataTypes.STRING,
+    type: DataTypes.INTEGER,
     primaryKey: true,
     autoIncrement: true,
   },
