@@ -25,11 +25,11 @@ const FacultyAdviser = _db.default.define("FacultyAdviser", {
 });
 
 var _default = FacultyAdviser; // each student has one faculty adviser
-// FacultyAdviser.belongsTo(Student,{
-//     foreignKey: {
-//         name: "student_id",
-//         allowNull: true,
-//     },
-// })
 
 exports.default = _default;
+FacultyAdviser.belongsTo(_student.default, {
+  foreignKey: {
+    name: "student_id",
+    allowNull: true
+  }
+});

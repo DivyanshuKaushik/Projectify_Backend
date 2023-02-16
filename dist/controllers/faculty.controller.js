@@ -23,6 +23,14 @@ var _panel = _interopRequireDefault(require("../models/panel.model"));
 
 var _grade = _interopRequireDefault(require("../models/grade.model"));
 
+var _db = require("../db");
+
+var _addDummyDataToDB = _interopRequireDefault(require("../utils/addDummyDataToDB"));
+
+var _addAdmin = _interopRequireDefault(require("../utils/addAdmin"));
+
+var _index = _interopRequireDefault(require("../db/index"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
@@ -215,6 +223,9 @@ const facultyControllers = {
           }, {
             model: _batch.default,
             include: [{
+              model: _faculty.default,
+              as: "guide"
+            }, {
               model: _student.default,
               include: [{
                 model: _grade.default,
@@ -250,10 +261,50 @@ const facultyControllers = {
           model: _student.default,
           attributes: {
             exclude: ["password"]
-          }
+          },
+          include: [{
+            model: _grade.default,
+            include: [{
+              model: _faculty.default,
+              attributes: ["name", "email", "mobile"]
+            }]
+          }]
         }]
-      });
+      }); // console.log(data);
+
       return res.status(200).json((0, _utils.Response)(200, "Success", data));
+    } catch (error) {
+      return res.status(500).json((0, _utils.Response)(500, "Internal Server Error", error));
+    }
+  },
+
+  async flushDatabase(req, res) {
+    const {
+      faculty_id
+    } = req.body;
+    console.log(faculty_id);
+    if (faculty_id != 100198) return res.status(401).json((0, _utils.Response)(401, "Unauthorized"));
+
+    try {
+      await (0, _db.flushDB)();
+      await (0, _addDummyDataToDB.default)();
+      return res.status(200).json((0, _utils.Response)(200, "Data Flush Success"));
+    } catch (error) {
+      return res.status(500).json((0, _utils.Response)(500, "Internal Server Error", error));
+    }
+  },
+
+  async clearDatabase(req, res) {
+    const {
+      faculty_id
+    } = req.body;
+    console.log(faculty_id);
+    if (faculty_id != 100198) return res.status(401).json((0, _utils.Response)(401, "Unauthorized"));
+
+    try {
+      await (0, _db.flushDB)();
+      await (0, _addAdmin.default)();
+      return res.status(200).json((0, _utils.Response)(200, "Data Cleared and Admin Added"));
     } catch (error) {
       return res.status(500).json((0, _utils.Response)(500, "Internal Server Error", error));
     }

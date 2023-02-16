@@ -6,7 +6,7 @@ var _dotenv = _interopRequireDefault(require("dotenv"));
 
 var _cors = _interopRequireDefault(require("cors"));
 
-var _db = require("./db");
+var _db = _interopRequireWildcard(require("./db"));
 
 var _batch = _interopRequireDefault(require("./models/batch.model"));
 
@@ -45,7 +45,10 @@ function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "functio
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 // import serverless from 'serverless-http'
-const app = (0, _express.default)(); // connect to database
+const app = (0, _express.default)(); // dotenv config - loading env secrets
+
+_dotenv.default.config(); // connect to database
+
 
 (0, _db.connectDB)(); // add dummy data to db
 // addDummyDataToDB();
@@ -53,10 +56,7 @@ const app = (0, _express.default)(); // connect to database
 
 app.use(_express.default.json()); // cors config
 
-app.use((0, _cors.default)()); // dotenv config - loading env secrets
-
-_dotenv.default.config();
-
+app.use((0, _cors.default)());
 const PORT = process.env.PORT || 4000;
 app.use("/api", _faculty2.default);
 app.use("/api", _project2.default);
@@ -91,6 +91,9 @@ app.get("/", async (req, res) => {
       }, {
         model: _batch.default,
         include: [{
+          model: _faculty.default,
+          as: "guide"
+        }, {
           model: _student.default,
           include: [{
             model: _grade.default,
@@ -112,7 +115,10 @@ app.get("/", async (req, res) => {
       model: _grade.default,
       include: [_faculty.default]
     }]
-  });
+  }); // const t = await FacultyAdviser.findAll({where:{faculty_id:"102463"},attributes:{include:[
+  //     sequalize.literal(`SELECT name FROM Students WHERE Students.student_id = FacultyAdviser.student_id`)
+  // ]}})
+
   res.json({
     status: true,
     message: "Our node.js app works",

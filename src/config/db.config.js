@@ -1,5 +1,4 @@
 export default {
-  // HOST: "my-db.coxxd2ftt8rh.ap-south-1.rds.amazonaws.com",
   HOST: "projectifydb.cztjekqh3yoj.ap-south-1.rds.amazonaws.com",
   PORT: 3306,
   USER: "admin",

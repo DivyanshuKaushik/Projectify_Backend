@@ -50,14 +50,14 @@ const Student = _db.default.define("Student", {
   }
 });
 
-var _default = Student;
+var _default = Student; // Student.hasOne(FacultyAdviser,{
+//     foreignKey: {
+//         name: "student_id",
+//         allowNull: true,
+//     },
+// })
+
 exports.default = _default;
-Student.hasOne(_facultyAdviser.default, {
-  foreignKey: {
-    name: "student_id",
-    allowNull: true
-  }
-});
 Student.hasMany(_grade.default, {
   foreignKey: {
     name: "student_id",

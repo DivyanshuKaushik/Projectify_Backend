@@ -27,13 +27,13 @@ const Grade = _db.default.define("Grade", {
     type: _sequelize.DataTypes.TEXT,
     allowNull: true
   }
-});
+}); // Grade.belongsTo(Faculty,{
+//     foreignKey: {
+//         name: "graded_by",
+//         allowNull: true,
+//     },
+// })
 
-Grade.belongsTo(_faculty.default, {
-  foreignKey: {
-    name: "graded_by",
-    allowNull: true
-  }
-});
+
 var _default = Grade;
 exports.default = _default;

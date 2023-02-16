@@ -5,6 +5,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
+var _admin = _interopRequireDefault(require("../demo/admin.json"));
+
 var _faculty = _interopRequireDefault(require("../dummy/faculty.json"));
 
 var _facultyAdviser = _interopRequireDefault(require("../dummy/faculty-adviser.json"));
@@ -49,6 +51,7 @@ async function addDummyDataToDB() {
     //     let pass = await hash(faculty.password)
     //     return {...faculty,password: pass}
     // }))
+    // await Faculty.bulkCreate(adminData);
     await _faculty2.default.bulkCreate(_faculty.default);
     await _panel2.default.bulkCreate(_panel.default);
     await _panelMember.default.bulkCreate(_panelMembers.default);

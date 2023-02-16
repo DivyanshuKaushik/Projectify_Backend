@@ -18,5 +18,6 @@ router.get("/reviews", _auth.isFaculty, _review.default.getAllReviews);
 router.get("/review/:id", _auth.isFaculty, _review.default.getReviewById);
 router.get("/reviews/:batch", _auth.isFaculty, _review.default.getReviewByBatch);
 router.post("/review", _auth.isAdmin, _review.default.createReview);
+router.delete("/review/:id", _auth.isAdmin, _review.default.deleteReview);
 var _default = router;
 exports.default = _default;

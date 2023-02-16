@@ -15,8 +15,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 const router = (0, _express.Router)();
 router.get("/project/:id", _auth.isAuthenticated, _project.default.getProjectById);
-router.post("/project/comment/:id", _auth.isAuthenticated, _project.default.comment); // bulk create 
+router.post("/project/comment/:id", _auth.isAuthenticated, _project.default.comment); // bulk create
 
 router.post("/projects", _auth.isAdmin, _project.default.createProjects);
+router.put("/projects/name", _auth.isFaculty, _project.default.updateProjectName);
+router.put("/projects/sdg", _auth.isFaculty, _project.default.updateProjectSdg);
 var _default = router;
 exports.default = _default;

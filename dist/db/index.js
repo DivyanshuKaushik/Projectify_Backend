@@ -5,6 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.connectDB = connectDB;
 exports.default = void 0;
+exports.flushDB = flushDB;
 
 var _sequelize = require("sequelize");
 
@@ -27,12 +28,25 @@ const sequelize = new _sequelize.Sequelize(_db.default.DB, _db.default.USER, _db
 async function connectDB() {
   try {
     await sequelize.authenticate();
-    console.log('Connection has been established successfully.');
-    await sequelize.sync(); // await sequelize.sync({ force: true })
+    console.log("Connection has been established successfully."); // await sequelize.sync();
 
+    await sequelize.sync({
+      force: true
+    });
     console.log("database synced");
   } catch (error) {
-    console.error('Unable to connect to the database:', error);
+    console.error("Unable to connect to the database:", error);
+  }
+}
+
+async function flushDB() {
+  try {
+    await sequelize.sync({
+      force: true
+    });
+    console.log("database flushed");
+  } catch (error) {
+    console.error("Unable to flush the database:", error);
   }
 }
 

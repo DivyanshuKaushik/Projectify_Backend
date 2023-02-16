@@ -160,16 +160,11 @@ const studentController = {
         grade,
         graded_by,
         phase
-      } = req.body;
-      const gradeExist = await _grade.default.findOne({
-        where: {
-          phase
-        }
-      });
-
-      if (gradeExist) {
-        return res.status(202).json((0, _utils.Response)(202, "Already graded"));
-      }
+      } = req.body; // const gradeExist = await Grade.findOne({ where: { phase } });
+      // console.log(gradeExist);
+      // if (gradeExist) {
+      //   return res.status(202).json(Response(202, "Already graded"));
+      // }
 
       const data = await _grade.default.create({
         student_id: studentId,

@@ -35,7 +35,8 @@ const reviewController = {
       const {
         deadline,
         batch,
-        phase
+        phase,
+        fields
       } = req.body;
       const data = await _review.default.create({
         deadline,
@@ -58,6 +59,19 @@ const reviewController = {
         }
       });
       return res.json((0, _utils.Response)(200, "Success", data));
+    } catch (error) {
+      return res.status(500).json((0, _utils.Response)(500, "Internal Server Error", error));
+    }
+  },
+
+  async deleteReview(req, res) {
+    try {
+      const data = await _review.default.destroy({
+        where: {
+          id: req.params.id
+        }
+      });
+      return res.json((0, _utils.Response)(200, "Review deleted successfully", data));
     } catch (error) {
       return res.status(500).json((0, _utils.Response)(500, "Internal Server Error", error));
     }

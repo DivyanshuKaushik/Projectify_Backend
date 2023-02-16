@@ -13,6 +13,8 @@ var _batch = _interopRequireDefault(require("./batch.model"));
 
 var _facultyAdviser = _interopRequireDefault(require("./faculty-adviser.model"));
 
+var _grade = _interopRequireDefault(require("./grade.model"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const Faculty = _db.default.define("Faculty", {
@@ -45,16 +47,26 @@ const Faculty = _db.default.define("Faculty", {
     type: _sequelize.DataTypes.STRING,
     allowNull: false
   }
-}); // // defining one to many relation between faculty and batches table
+}); // defining one to many relation between faculty and batches table as guide
 // Faculty.hasMany(Batch, {
 //     foreignKey: {
-//         name: "facultyId",
-//         allowNull: true,
-//         // onDelete: "CASCADE",
-//         // onUpdate: "CASCADE",
+//         name: "guide_id",
 //     },
 // });
-// one facuty adviser can have many students - populate faculty_adviser table
+// Faculty.hasOne(Grade,{
+//     foreignKey: {
+//         name: "graded_by",
+//         allowNull: true,
+//     },
+// })
+
+
+_grade.default.belongsTo(Faculty, {
+  foreignKey: {
+    name: "graded_by",
+    allowNull: true
+  }
+}); // one facuty adviser can have many students - populate faculty_adviser table
 
 
 Faculty.hasMany(_facultyAdviser.default, {

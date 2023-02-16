@@ -9,6 +9,8 @@ var _sequelize = require("sequelize");
 
 var _db = _interopRequireDefault(require("../db"));
 
+var _sdg = _interopRequireDefault(require("./sdg.model"));
+
 var _student = _interopRequireDefault(require("./student.model"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -34,6 +36,12 @@ Project.hasMany(_student.default, {
     allowNull: true // onDelete: "CASCADE",
     // onUpdate: "CASCADE",
 
+  }
+});
+Project.hasOne(_sdg.default, {
+  foreignKey: {
+    name: "id",
+    allowNull: true
   }
 });
 var _default = Project;
