@@ -16,6 +16,7 @@ export default PanelMember;
 PanelMember.belongsTo(Faculty, {
     foreignKey: {
         name: "faculty_id",
+        allowNull: true,
     },
 });
 

@@ -1,598 +1,1214 @@
 [
- {
-  "panel_id": 1,
-  "faculty_id": 100185
- },
- {
-  "panel_id": 1,
-  "faculty_id": 101242
- },
- {
-  "panel_id": 1,
-  "faculty_id": 101308
- },
- {
-  "panel_id": 2,
-  "faculty_id": 102454
- },
- {
-  "panel_id": 2,
-  "faculty_id": 100507
- },
- {
-  "panel_id": 2,
-  "faculty_id": 101376
- },
- {
-  "panel_id": 3,
-  "faculty_id": 100171
- },
- {
-  "panel_id": 3,
-  "faculty_id": 100487
- },
- {
-  "panel_id": 3,
-  "faculty_id": 101304
- },
- {
-  "panel_id": 4,
-  "faculty_id": 100189
- },
- {
-  "panel_id": 4,
-  "faculty_id": 101015
- },
- {
-  "panel_id": 4,
-  "faculty_id": 101616
- },
- {
-  "panel_id": 4,
-  "faculty_id": 102692
- },
- {
-  "panel_id": 5,
-  "faculty_id": 100503
- },
- {
-  "panel_id": 5,
-  "faculty_id": 100498
- },
- {
-  "panel_id": 5,
-  "faculty_id": 101070
- },
- {
-  "panel_id": 5,
-  "faculty_id": 102679
- },
- {
-  "panel_id": 6,
-  "faculty_id": 100511
- },
- {
-  "panel_id": 6,
-  "faculty_id": 102238
- },
- {
-  "panel_id": 6,
-  "faculty_id": 102687
- },
- {
-  "panel_id": 6,
-  "faculty_id": 102911
- },
- {
-  "panel_id": 7,
-  "faculty_id": 101940
- },
- {
-  "panel_id": 7,
-  "faculty_id": 101931
- },
- {
-  "panel_id": 7,
-  "faculty_id": 101947
- },
- {
-  "panel_id": 7,
-  "faculty_id": 102190
- },
- {
-  "panel_id": 8,
-  "faculty_id": 102092
- },
- {
-  "panel_id": 8,
-  "faculty_id": 102243
- },
- {
-  "panel_id": 8,
-  "faculty_id": 102676
- },
- {
-  "panel_id": 8,
-  "faculty_id": 102921
- },
- {
-  "panel_id": 9,
-  "faculty_id": 102205
- },
- {
-  "panel_id": 9,
-  "faculty_id": 100753
- },
- {
-  "panel_id": 9,
-  "faculty_id": 102463
- },
- {
-  "panel_id": 9,
-  "faculty_id": 102605
- },
- {
-  "panel_id": 10,
-  "faculty_id": 102456
- },
- {
-  "panel_id": 10,
-  "faculty_id": 101264
- },
- {
-  "panel_id": 10,
-  "faculty_id": 101925
- },
- {
-  "panel_id": 10,
-  "faculty_id": 102064
- },
- {
-  "panel_id": 11,
-  "faculty_id": 102457
- },
- {
-  "panel_id": 11,
-  "faculty_id": 100169
- },
- {
-  "panel_id": 11,
-  "faculty_id": 100959
- },
- {
-  "panel_id": 11,
-  "faculty_id": 101581
- },
- {
-  "panel_id": 12,
-  "faculty_id": 102469
- },
- {
-  "panel_id": 12,
-  "faculty_id": 101533
- },
- {
-  "panel_id": 12,
-  "faculty_id": 102253
- },
- {
-  "panel_id": 12,
-  "faculty_id": 102518
- },
- {
-  "panel_id": 13,
-  "faculty_id": 102506
- },
- {
-  "panel_id": 13,
-  "faculty_id": 100156
- },
- {
-  "panel_id": 13,
-  "faculty_id": 100934
- },
- {
-  "panel_id": 13,
-  "faculty_id": 102686
- },
- {
-  "panel_id": 14,
-  "faculty_id": 102550
- },
- {
-  "panel_id": 14,
-  "faculty_id": 101061
- },
- {
-  "panel_id": 14,
-  "faculty_id": 101536
- },
- {
-  "panel_id": 14,
-  "faculty_id": 102084
- },
- {
-  "panel_id": 15,
-  "faculty_id": 102599
- },
- {
-  "panel_id": 15,
-  "faculty_id": 10096
- },
- {
-  "panel_id": 15,
-  "faculty_id": 101933
- },
- {
-  "panel_id": 15,
-  "faculty_id": 102811
- },
- {
-  "panel_id": 16,
-  "faculty_id": 102602
- },
- {
-  "panel_id": 16,
-  "faculty_id": 101948
- },
- {
-  "panel_id": 16,
-  "faculty_id": 101946
- },
- {
-  "panel_id": 16,
-  "faculty_id": 102240
- },
- {
-  "panel_id": 17,
-  "faculty_id": 102611
- },
- {
-  "panel_id": 17,
-  "faculty_id": 102067
- },
- {
-  "panel_id": 17,
-  "faculty_id": 102241
- },
- {
-  "panel_id": 17,
-  "faculty_id": 102689
- },
- {
-  "panel_id": 18,
-  "faculty_id": 102660
- },
- {
-  "panel_id": 18,
-  "faculty_id": 100665
- },
- {
-  "panel_id": 18,
-  "faculty_id": 102832
- },
- {
-  "panel_id": 18,
-  "faculty_id": 102931
- },
- {
-  "panel_id": 19,
-  "faculty_id": 102668
- },
- {
-  "panel_id": 19,
-  "faculty_id": 101358
- },
- {
-  "panel_id": 19,
-  "faculty_id": 102218
- },
- {
-  "panel_id": 19,
-  "faculty_id": 102930
- },
- {
-  "panel_id": 20,
-  "faculty_id": 102670
- },
- {
-  "panel_id": 20,
-  "faculty_id": 100167
- },
- {
-  "panel_id": 20,
-  "faculty_id": 100499
- },
- {
-  "panel_id": 20,
-  "faculty_id": 102926
- },
- {
-  "panel_id": 21,
-  "faculty_id": 102685
- },
- {
-  "panel_id": 21,
-  "faculty_id": 101694
- },
- {
-  "panel_id": 21,
-  "faculty_id": 102235
- },
- {
-  "panel_id": 21,
-  "faculty_id": 102833
- },
- {
-  "panel_id": 22,
-  "faculty_id": 102694
- },
- {
-  "panel_id": 22,
-  "faculty_id": 102819
- },
- {
-  "panel_id": 22,
-  "faculty_id": 102834
- },
- {
-  "panel_id": 22,
-  "faculty_id": 102885
- },
- {
-  "panel_id": 23,
-  "faculty_id": 100165
- },
- {
-  "panel_id": 23,
-  "faculty_id": 100163
- },
- {
-  "panel_id": 23,
-  "faculty_id": 101537
- },
- {
-  "panel_id": 23,
-  "faculty_id": 102074
- },
- {
-  "panel_id": 24,
-  "faculty_id": 100186
- },
- {
-  "panel_id": 24,
-  "faculty_id": 100933
- },
- {
-  "panel_id": 24,
-  "faculty_id": 101303
- },
- {
-  "panel_id": 24,
-  "faculty_id": 102672
- },
- {
-  "panel_id": 25,
-  "faculty_id": 102678
- },
- {
-  "panel_id": 25,
-  "faculty_id": 102085
- },
- {
-  "panel_id": 25,
-  "faculty_id": 102830
- },
- {
-  "panel_id": 25,
-  "faculty_id": 102919
- },
- {
-  "panel_id": 26,
-  "faculty_id": 102090
- },
- {
-  "panel_id": 26,
-  "faculty_id": 100159
- },
- {
-  "panel_id": 26,
-  "faculty_id": 101688
- },
- {
-  "panel_id": 26,
-  "faculty_id": 102077
- },
- {
-  "panel_id": 27,
-  "faculty_id": 102091
- },
- {
-  "panel_id": 27,
-  "faculty_id": 100200
- },
- {
-  "panel_id": 27,
-  "faculty_id": 102844
- },
- {
-  "panel_id": 27,
-  "faculty_id": 102916
- },
- {
-  "panel_id": 28,
-  "faculty_id": 102208
- },
- {
-  "panel_id": 28,
-  "faculty_id": 101357
- },
- {
-  "panel_id": 28,
-  "faculty_id": 102078
- },
- {
-  "panel_id": 28,
-  "faculty_id": 102936
- },
- {
-  "panel_id": 29,
-  "faculty_id": 102465
- },
- {
-  "panel_id": 29,
-  "faculty_id": 100772
- },
- {
-  "panel_id": 29,
-  "faculty_id": 102228
- },
- {
-  "panel_id": 29,
-  "faculty_id": 102224
- },
- {
-  "panel_id": 30,
-  "faculty_id": 102813
- },
- {
-  "panel_id": 30,
-  "faculty_id": 102858
- },
- {
-  "panel_id": 30,
-  "faculty_id": 102859
- },
- {
-  "panel_id": 30,
-  "faculty_id": 102915
- },
- {
-  "panel_id": 31,
-  "faculty_id": 102839
- },
- {
-  "panel_id": 31,
-  "faculty_id": 102872
- },
- {
-  "panel_id": 31,
-  "faculty_id": 102882
- },
- {
-  "panel_id": 31,
-  "faculty_id": 102913
- },
- {
-  "panel_id": 32,
-  "faculty_id": 100198
- },
- {
-  "panel_id": 32,
-  "faculty_id": 100485
- },
- {
-  "panel_id": 32,
-  "faculty_id": 102808
- },
- {
-  "panel_id": 32,
-  "faculty_id": 102925
- },
- {
-  "panel_id": 33,
-  "faculty_id": 100394
- },
- {
-  "panel_id": 33,
-  "faculty_id": 102671
- },
- {
-  "panel_id": 33,
-  "faculty_id": 102884
- },
- {
-  "panel_id": 33,
-  "faculty_id": 102912
- },
- {
-  "panel_id": 34,
-  "faculty_id": 102256
- },
- {
-  "panel_id": 34,
-  "faculty_id": 102816
- },
- {
-  "panel_id": 34,
-  "faculty_id": 102910
- },
- {
-  "panel_id": 34,
-  "faculty_id": 102917
- },
- {
-  "panel_id": 35,
-  "faculty_id": 102598
- },
- {
-  "panel_id": 35,
-  "faculty_id": 100506
- },
- {
-  "panel_id": 35,
-  "faculty_id": 101699
- },
- {
-  "panel_id": 35,
-  "faculty_id": 102899
- },
- {
-  "panel_id": 36,
-  "faculty_id": 102606
- },
- {
-  "panel_id": 36,
-  "faculty_id": 101695
- },
- {
-  "panel_id": 36,
-  "faculty_id": 102094
- },
- {
-  "panel_id": 36,
-  "faculty_id": 102096
- },
- {
-  "panel_id": 37,
-  "faculty_id": 100180
- },
- {
-  "panel_id": 37,
-  "faculty_id": 100162
- },
- {
-  "panel_id": 37,
-  "faculty_id": 101870
- },
- {
-  "panel_id": 37,
-  "faculty_id": 101973
- },
- {
-  "panel_id": 38,
-  "faculty_id": 100196
- },
- {
-  "panel_id": 38,
-  "faculty_id": 101562
- },
- {
-  "panel_id": 38,
-  "faculty_id": 101579
- },
- {
-  "panel_id": 38,
-  "faculty_id": 102891
- }
-]
+  {
+    "panel_id": 54,
+    "faculty_id": 100160
+  },
+  {
+    "panel_id": 54,
+    "faculty_id": 101591
+  },
+  {
+    "panel_id": 54,
+    "faculty_id": 101625
+  },
+  {
+    "panel_id": 54,
+    "faculty_id": 103041
+  },
+  {
+    "panel_id": 54,
+    "faculty_id": 100158
+  },
+  {
+    "panel_id": 55,
+    "faculty_id": 100480
+  },
+  {
+    "panel_id": 55,
+    "faculty_id": 102206
+  },
+  {
+    "panel_id": 55,
+    "faculty_id": 103017
+  },
+  {
+    "panel_id": 55,
+    "faculty_id": 103042
+  },
+  {
+    "panel_id": 55,
+    "faculty_id": 102467
+  },
+  {
+    "panel_id": 56,
+    "faculty_id": 100481
+  },
+  {
+    "panel_id": 56,
+    "faculty_id": 102069
+  },
+  {
+    "panel_id": 56,
+    "faculty_id": 102728
+  },
+  {
+    "panel_id": 56,
+    "faculty_id": 103029
+  },
+  {
+    "panel_id": 56,
+    "faculty_id": 102462
+  },
+  {
+    "panel_id": 57,
+    "faculty_id": 103010
+  },
+  {
+    "panel_id": 57,
+    "faculty_id": 102075
+  },
+  {
+    "panel_id": 57,
+    "faculty_id": 102729
+  },
+  {
+    "panel_id": 57,
+    "faculty_id": 103032
+  },
+  {
+    "panel_id": 57,
+    "faculty_id": 101087
+  },
+  {
+    "panel_id": 58,
+    "faculty_id": 100392
+  },
+  {
+    "panel_id": 58,
+    "faculty_id": 102098
+  },
+  {
+    "panel_id": 58,
+    "faculty_id": 102755
+  },
+  {
+    "panel_id": 58,
+    "faculty_id": 101538
+  },
+  {
+    "panel_id": 58,
+    "faculty_id": 102223
+  },
+  {
+    "panel_id": 59,
+    "faculty_id": 100512
+  },
+  {
+    "panel_id": 59,
+    "faculty_id": 102068
+  },
+  {
+    "panel_id": 59,
+    "faculty_id": 102756
+  },
+  {
+    "panel_id": 59,
+    "faculty_id": 102225
+  },
+  {
+    "panel_id": 59,
+    "faculty_id": 100387
+  },
+  {
+    "panel_id": 60,
+    "faculty_id": 103012
+  },
+  {
+    "panel_id": 60,
+    "faculty_id": 102219
+  },
+  {
+    "panel_id": 60,
+    "faculty_id": 102764
+  },
+  {
+    "panel_id": 60,
+    "faculty_id": 103037
+  },
+  {
+    "panel_id": 60,
+    "faculty_id": 100403
+  },
+  {
+    "panel_id": 61,
+    "faculty_id": 103036
+  },
+  {
+    "panel_id": 61,
+    "faculty_id": 100386
+  },
+  {
+    "panel_id": 61,
+    "faculty_id": 102726
+  },
+  {
+    "panel_id": 61,
+    "faculty_id": 100497
+  },
+  {
+    "panel_id": 62,
+    "faculty_id": 100994
+  },
+  {
+    "panel_id": 62,
+    "faculty_id": 102227
+  },
+  {
+    "panel_id": 62,
+    "faculty_id": 102773
+  },
+  {
+    "panel_id": 62,
+    "faculty_id": 102661
+  },
+  {
+    "panel_id": 63,
+    "faculty_id": 101510
+  },
+  {
+    "panel_id": 63,
+    "faculty_id": 102231
+  },
+  {
+    "panel_id": 63,
+    "faculty_id": 102775
+  },
+  {
+    "panel_id": 63,
+    "faculty_id": 102666
+  },
+  {
+    "panel_id": 64,
+    "faculty_id": 101535
+  },
+  {
+    "panel_id": 64,
+    "faculty_id": 102249
+  },
+  {
+    "panel_id": 64,
+    "faculty_id": 102776
+  },
+  {
+    "panel_id": 64,
+    "faculty_id": 102690
+  },
+  {
+    "panel_id": 65,
+    "faculty_id": 100479
+  },
+  {
+    "panel_id": 65,
+    "faculty_id": 102259
+  },
+  {
+    "panel_id": 65,
+    "faculty_id": 102789
+  },
+  {
+    "panel_id": 65,
+    "faculty_id": 102693
+  },
+  {
+    "panel_id": 66,
+    "faculty_id": 101541
+  },
+  {
+    "panel_id": 66,
+    "faculty_id": 102680
+  },
+  {
+    "panel_id": 66,
+    "faculty_id": 102806
+  },
+  {
+    "panel_id": 66,
+    "faculty_id": 102703
+  },
+  {
+    "panel_id": 67,
+    "faculty_id": 101569
+  },
+  {
+    "panel_id": 67,
+    "faculty_id": 102681
+  },
+  {
+    "panel_id": 67,
+    "faculty_id": 102807
+  },
+  {
+    "panel_id": 67,
+    "faculty_id": 102712
+  },
+  {
+    "panel_id": 68,
+    "faculty_id": 101587
+  },
+  {
+    "panel_id": 68,
+    "faculty_id": 102707
+  },
+  {
+    "panel_id": 68,
+    "faculty_id": 102922
+  },
+  {
+    "panel_id": 68,
+    "faculty_id": 102894
+  },
+  {
+    "panel_id": 68,
+    "faculty_id": 102725
+  },
+  {
+    "panel_id": 69,
+    "faculty_id": 101878
+  },
+  {
+    "panel_id": 69,
+    "faculty_id": 102711
+  },
+  {
+    "panel_id": 69,
+    "faculty_id": 102896
+  },
+  {
+    "panel_id": 69,
+    "faculty_id": 102065
+  },
+  {
+    "panel_id": 70,
+    "faculty_id": 101670
+  },
+  {
+    "panel_id": 70,
+    "faculty_id": 102713
+  },
+  {
+    "panel_id": 70,
+    "faculty_id": 102727
+  },
+  {
+    "panel_id": 70,
+    "faculty_id": 102216
+  },
+  {
+    "panel_id": 71,
+    "faculty_id": 101588
+  },
+  {
+    "panel_id": 71,
+    "faculty_id": 102724
+  },
+  {
+    "panel_id": 71,
+    "faculty_id": 101048
+  },
+  {
+    "panel_id": 71,
+    "faculty_id": 100631
+  },
+  {
+    "panel_id": 71,
+    "faculty_id": 100398
+  },
+  {
+    "panel_id": 72,
+    "faculty_id": 101916
+  },
+  {
+    "panel_id": 72,
+    "faculty_id": 102250
+  },
+  {
+    "panel_id": 72,
+    "faculty_id": 101995
+  },
+  {
+    "panel_id": 72,
+    "faculty_id": 100401
+  },
+  {
+    "panel_id": 1,
+    "faculty_id": 100185
+  },
+  {
+    "panel_id": 1,
+    "faculty_id": 101242
+  },
+  {
+    "panel_id": 1,
+    "faculty_id": 101308
+  },
+  {
+    "panel_id": 2,
+    "faculty_id": 102454
+  },
+  {
+    "panel_id": 2,
+    "faculty_id": 100507
+  },
+  {
+    "panel_id": 2,
+    "faculty_id": 101376
+  },
+  {
+    "panel_id": 3,
+    "faculty_id": 100171
+  },
+  {
+    "panel_id": 3,
+    "faculty_id": 100487
+  },
+  {
+    "panel_id": 3,
+    "faculty_id": 102966
+  },
+  {
+    "panel_id": 3,
+    "faculty_id": 102974
+  },
+  {
+    "panel_id": 4,
+    "faculty_id": 100189
+  },
+  {
+    "panel_id": 4,
+    "faculty_id": 101015
+  },
+  {
+    "panel_id": 4,
+    "faculty_id": 101616
+  },
+  {
+    "panel_id": 4,
+    "faculty_id": 102692
+  },
+  {
+    "panel_id": 5,
+    "faculty_id": 100503
+  },
+  {
+    "panel_id": 5,
+    "faculty_id": 100498
+  },
+  {
+    "panel_id": 5,
+    "faculty_id": 101070
+  },
+  {
+    "panel_id": 5,
+    "faculty_id": 102679
+  },
+  {
+    "panel_id": 6,
+    "faculty_id": 100511
+  },
+  {
+    "panel_id": 6,
+    "faculty_id": 102238
+  },
+  {
+    "panel_id": 6,
+    "faculty_id": 102687
+  },
+  {
+    "panel_id": 6,
+    "faculty_id": 102911
+  },
+  {
+    "panel_id": 7,
+    "faculty_id": 101940
+  },
+  {
+    "panel_id": 7,
+    "faculty_id": 101931
+  },
+  {
+    "panel_id": 7,
+    "faculty_id": 101947
+  },
+  {
+    "panel_id": 7,
+    "faculty_id": 102190
+  },
+  {
+    "panel_id": 8,
+    "faculty_id": 102092
+  },
+  {
+    "panel_id": 8,
+    "faculty_id": 102243
+  },
+  {
+    "panel_id": 8,
+    "faculty_id": 102676
+  },
+  {
+    "panel_id": 8,
+    "faculty_id": 102921
+  },
+  {
+    "panel_id": 9,
+    "faculty_id": 102205
+  },
+  {
+    "panel_id": 9,
+    "faculty_id": 100753
+  },
+  {
+    "panel_id": 9,
+    "faculty_id": 102463
+  },
+  {
+    "panel_id": 9,
+    "faculty_id": 102605
+  },
+  {
+    "panel_id": 10,
+    "faculty_id": 102456
+  },
+  {
+    "panel_id": 10,
+    "faculty_id": 101264
+  },
+  {
+    "panel_id": 10,
+    "faculty_id": 101925
+  },
+  {
+    "panel_id": 10,
+    "faculty_id": 102064
+  },
+  {
+    "panel_id": 11,
+    "faculty_id": 102457
+  },
+  {
+    "panel_id": 11,
+    "faculty_id": 100169
+  },
+  {
+    "panel_id": 11,
+    "faculty_id": 100959
+  },
+  {
+    "panel_id": 11,
+    "faculty_id": 101581
+  },
+  {
+    "panel_id": 12,
+    "faculty_id": 102469
+  },
+  {
+    "panel_id": 12,
+    "faculty_id": 101533
+  },
+  {
+    "panel_id": 12,
+    "faculty_id": 102253
+  },
+  {
+    "panel_id": 12,
+    "faculty_id": 102518
+  },
+  {
+    "panel_id": 13,
+    "faculty_id": 102506
+  },
+  {
+    "panel_id": 13,
+    "faculty_id": 100156
+  },
+  {
+    "panel_id": 13,
+    "faculty_id": 100934
+  },
+  {
+    "panel_id": 14,
+    "faculty_id": 102550
+  },
+  {
+    "panel_id": 14,
+    "faculty_id": 101061
+  },
+  {
+    "panel_id": 14,
+    "faculty_id": 101536
+  },
+  {
+    "panel_id": 14,
+    "faculty_id": 102084
+  },
+  {
+    "panel_id": 15,
+    "faculty_id": 102599
+  },
+  {
+    "panel_id": 15,
+    "faculty_id": 100916
+  },
+  {
+    "panel_id": 15,
+    "faculty_id": 101933
+  },
+  {
+    "panel_id": 15,
+    "faculty_id": 102811
+  },
+  {
+    "panel_id": 16,
+    "faculty_id": 102602
+  },
+  {
+    "panel_id": 16,
+    "faculty_id": 101948
+  },
+  {
+    "panel_id": 16,
+    "faculty_id": 101946
+  },
+  {
+    "panel_id": 16,
+    "faculty_id": 102240
+  },
+  {
+    "panel_id": 17,
+    "faculty_id": 102611
+  },
+  {
+    "panel_id": 17,
+    "faculty_id": 102067
+  },
+  {
+    "panel_id": 17,
+    "faculty_id": 102241
+  },
+  {
+    "panel_id": 17,
+    "faculty_id": 102689
+  },
+  {
+    "panel_id": 18,
+    "faculty_id": 102660
+  },
+  {
+    "panel_id": 18,
+    "faculty_id": 100665
+  },
+  {
+    "panel_id": 18,
+    "faculty_id": 102832
+  },
+  {
+    "panel_id": 18,
+    "faculty_id": 102931
+  },
+  {
+    "panel_id": 19,
+    "faculty_id": 102668
+  },
+  {
+    "panel_id": 19,
+    "faculty_id": 101358
+  },
+  {
+    "panel_id": 19,
+    "faculty_id": 102218
+  },
+  {
+    "panel_id": 19,
+    "faculty_id": 102930
+  },
+  {
+    "panel_id": 20,
+    "faculty_id": 102670
+  },
+  {
+    "panel_id": 20,
+    "faculty_id": 100167
+  },
+  {
+    "panel_id": 20,
+    "faculty_id": 100499
+  },
+  {
+    "panel_id": 20,
+    "faculty_id": 102926
+  },
+  {
+    "panel_id": 21,
+    "faculty_id": 102685
+  },
+  {
+    "panel_id": 21,
+    "faculty_id": 101694
+  },
+  {
+    "panel_id": 21,
+    "faculty_id": 102235
+  },
+  {
+    "panel_id": 21,
+    "faculty_id": 102833
+  },
+  {
+    "panel_id": 22,
+    "faculty_id": 102694
+  },
+  {
+    "panel_id": 22,
+    "faculty_id": 102984
+  },
+  {
+    "panel_id": 22,
+    "faculty_id": 102997
+  },
+  {
+    "panel_id": 22,
+    "faculty_id": 102834
+  },
+  {
+    "panel_id": 22,
+    "faculty_id": 102885
+  },
+  {
+    "panel_id": 23,
+    "faculty_id": 100165
+  },
+  {
+    "panel_id": 23,
+    "faculty_id": 100163
+  },
+  {
+    "panel_id": 23,
+    "faculty_id": 102939
+  },
+  {
+    "panel_id": 23,
+    "faculty_id": 102074
+  },
+  {
+    "panel_id": 24,
+    "faculty_id": 100186
+  },
+  {
+    "panel_id": 24,
+    "faculty_id": 100933
+  },
+  {
+    "panel_id": 24,
+    "faculty_id": 101303
+  },
+  {
+    "panel_id": 24,
+    "faculty_id": 103001
+  },
+  {
+    "panel_id": 25,
+    "faculty_id": 102678
+  },
+  {
+    "panel_id": 25,
+    "faculty_id": 2
+  },
+  {
+    "panel_id": 25,
+    "faculty_id": 102830
+  },
+  {
+    "panel_id": 25,
+    "faculty_id": 102919
+  },
+  {
+    "panel_id": 26,
+    "faculty_id": 102090
+  },
+  {
+    "panel_id": 26,
+    "faculty_id": 100159
+  },
+  {
+    "panel_id": 26,
+    "faculty_id": 101688
+  },
+  {
+    "panel_id": 26,
+    "faculty_id": 102077
+  },
+  {
+    "panel_id": 27,
+    "faculty_id": 102091
+  },
+  {
+    "panel_id": 27,
+    "faculty_id": 102844
+  },
+  {
+    "panel_id": 27,
+    "faculty_id": 102916
+  },
+  {
+    "panel_id": 28,
+    "faculty_id": 102208
+  },
+  {
+    "panel_id": 28,
+    "faculty_id": 101357
+  },
+  {
+    "panel_id": 28,
+    "faculty_id": 102078
+  },
+  {
+    "panel_id": 28,
+    "faculty_id": 102936
+  },
+  {
+    "panel_id": 29,
+    "faculty_id": 102465
+  },
+  {
+    "panel_id": 29,
+    "faculty_id": 100772
+  },
+  {
+    "panel_id": 29,
+    "faculty_id": 102228
+  },
+  {
+    "panel_id": 29,
+    "faculty_id": 102224
+  },
+  {
+    "panel_id": 30,
+    "faculty_id": 102813
+  },
+  {
+    "panel_id": 30,
+    "faculty_id": 102858
+  },
+  {
+    "panel_id": 30,
+    "faculty_id": 102859
+  },
+  {
+    "panel_id": 30,
+    "faculty_id": 102915
+  },
+  {
+    "panel_id": 31,
+    "faculty_id": 100485
+  },
+  {
+    "panel_id": 31,
+    "faculty_id": 102963
+  },
+  {
+    "panel_id": 31,
+    "faculty_id": 102882
+  },
+  {
+    "panel_id": 31,
+    "faculty_id": 102913
+  },
+  {
+    "panel_id": 32,
+    "faculty_id": 100198
+  },
+  {
+    "panel_id": 32,
+    "faculty_id": 102975
+  },
+  {
+    "panel_id": 32,
+    "faculty_id": 102979
+  },
+  {
+    "panel_id": 32,
+    "faculty_id": 102808
+  },
+  {
+    "panel_id": 32,
+    "faculty_id": 102925
+  },
+  {
+    "panel_id": 33,
+    "faculty_id": 100394
+  },
+  {
+    "panel_id": 33,
+    "faculty_id": 102671
+  },
+  {
+    "panel_id": 33,
+    "faculty_id": 102884
+  },
+  {
+    "panel_id": 33,
+    "faculty_id": 102912
+  },
+  {
+    "panel_id": 34,
+    "faculty_id": 102256
+  },
+  {
+    "panel_id": 34,
+    "faculty_id": 102816
+  },
+  {
+    "panel_id": 34,
+    "faculty_id": 102910
+  },
+  {
+    "panel_id": 34,
+    "faculty_id": 102917
+  },
+  {
+    "panel_id": 35,
+    "faculty_id": 102598
+  },
+  {
+    "panel_id": 35,
+    "faculty_id": 100506
+  },
+  {
+    "panel_id": 35,
+    "faculty_id": 101699
+  },
+  {
+    "panel_id": 35,
+    "faculty_id": 102899
+  },
+  {
+    "panel_id": 36,
+    "faculty_id": 102606
+  },
+  {
+    "panel_id": 36,
+    "faculty_id": 101695
+  },
+  {
+    "panel_id": 36,
+    "faculty_id": 102094
+  },
+  {
+    "panel_id": 36,
+    "faculty_id": 102096
+  },
+  {
+    "panel_id": 37,
+    "faculty_id": 100180
+  },
+  {
+    "panel_id": 37,
+    "faculty_id": 100162
+  },
+  {
+    "panel_id": 37,
+    "faculty_id": 101870
+  },
+  {
+    "panel_id": 37,
+    "faculty_id": 101973
+  },
+  {
+    "panel_id": 38,
+    "faculty_id": 100196
+  },
+  {
+    "panel_id": 38,
+    "faculty_id": 101562
+  },
+  {
+    "panel_id": 38,
+    "faculty_id": 101579
+  },
+  {
+    "panel_id": 38,
+    "faculty_id": 102891
+  },
+  {
+    "panel_id": 39,
+    "faculty_id": 100174
+  },
+  {
+    "panel_id": 39,
+    "faculty_id": 101370
+  },
+  {
+    "panel_id": 39,
+    "faculty_id": 101407
+  },
+  {
+    "panel_id": 39,
+    "faculty_id": 102944
+  },
+  {
+    "panel_id": 39,
+    "faculty_id": 101139
+  },
+  {
+    "panel_id": 48,
+    "faculty_id": 102978
+  },
+  {
+    "panel_id": 48,
+    "faculty_id": 100617
+  },
+  {
+    "panel_id": 48,
+    "faculty_id": 101714
+  },
+  {
+    "panel_id": 48,
+    "faculty_id": 101996
+  },
+  {
+    "panel_id": 48,
+    "faculty_id": 102989
+  },
+  {
+    "panel_id": 49,
+    "faculty_id": 101928
+  },
+  {
+    "panel_id": 49,
+    "faculty_id": 102361
+  },
+  {
+    "panel_id": 49,
+    "faculty_id": 102890
+  },
+  {
+    "panel_id": 49,
+    "faculty_id": 102986
+  },
+  {
+    "panel_id": 49,
+    "faculty_id": 102909
+  },
+  {
+    "panel_id": 50,
+    "faculty_id": 100489
+  },
+  {
+    "panel_id": 50,
+    "faculty_id": 102877
+  },
+  {
+    "panel_id": 50,
+    "faculty_id": 102906
+  },
+  {
+    "panel_id": 50,
+    "faculty_id": 102905
+  },
+  {
+    "panel_id": 51,
+    "faculty_id": 100492
+  },
+  {
+    "panel_id": 51,
+    "faculty_id": 102820
+  },
+  {
+    "panel_id": 51,
+    "faculty_id": 102864
+  },
+  {
+    "panel_id": 51,
+    "faculty_id": 102868
+  },
+  {
+    "panel_id": 51,
+    "faculty_id": 102946
+  },
+  {
+    "panel_id": 52,
+    "faculty_id": 102450
+  },
+  {
+    "panel_id": 52,
+    "faculty_id": 101590
+  },
+  {
+    "panel_id": 52,
+    "faculty_id": 102751
+  },
+  {
+    "panel_id": 52,
+    "faculty_id": 102870
+  },
+  {
+    "panel_id": 52,
+    "faculty_id": 102880
+  },
+  {
+    "panel_id": 53,
+    "faculty_id": 100197
+  },
+  {
+    "panel_id": 53,
+    "faculty_id": 101566
+  },
+  {
+    "panel_id": 53,
+    "faculty_id": 102907
+  },
+  {
+    "panel_id": 53,
+    "faculty_id": 102920
+  },
+  {
+    "panel_id": 40,
+    "faculty_id": 100932
+  },
+  {
+    "panel_id": 40,
+    "faculty_id": 101565
+  },
+  {
+    "panel_id": 40,
+    "faculty_id": 102876
+  },
+  {
+    "panel_id": 40,
+    "faculty_id": 102887
+  },
+  {
+    "panel_id": 41,
+    "faculty_id": 101944
+  },
+  {
+    "panel_id": 41,
+    "faculty_id": 101247
+  },
+  {
+    "panel_id": 41,
+    "faculty_id": 101257
+  },
+  {
+    "panel_id": 41,
+    "faculty_id": 102836
+  },
+  {
+    "panel_id": 41,
+    "faculty_id": 102829
+  },
+  {
+    "panel_id": 42,
+    "faculty_id": 100195
+  },
+  {
+    "panel_id": 42,
+    "faculty_id": 102883
+  },
+  {
+    "panel_id": 42,
+    "faculty_id": 102900
+  },
+  {
+    "panel_id": 43,
+    "faculty_id": 100161
+  },
+  {
+    "panel_id": 43,
+    "faculty_id": 101246
+  },
+  {
+    "panel_id": 43,
+    "faculty_id": 101874
+  },
+  {
+    "panel_id": 43,
+    "faculty_id": 101959
+  },
+  {
+    "panel_id": 43,
+    "faculty_id": 102733
+  },
+  {
+    "panel_id": 44,
+    "faculty_id": 100183
+  },
+  {
+    "panel_id": 44,
+    "faculty_id": 102856
+  },
+  {
+    "panel_id": 44,
+    "faculty_id": 102866
+  },
+  {
+    "panel_id": 44,
+    "faculty_id": 102908
+  },
+  {
+    "panel_id": 45,
+    "faculty_id": 102214
+  },
+  {
+    "panel_id": 45,
+    "faculty_id": 101570
+  },
+  {
+    "panel_id": 45,
+    "faculty_id": 102709
+  },
+  {
+    "panel_id": 45,
+    "faculty_id": 102781
+  },
+  {
+    "panel_id": 45,
+    "faculty_id": 102934
+  },
+  {
+    "panel_id": 46,
+    "faculty_id": 100381
+  },
+  {
+    "panel_id": 46,
+    "faculty_id": 102782
+  },
+  {
+    "panel_id": 46,
+    "faculty_id": 102818
+  },
+  {
+    "panel_id": 46,
+    "faculty_id": 102862
+  },
+  {
+    "panel_id": 47,
+    "faculty_id": 102221
+  },
+  {
+    "panel_id": 47,
+    "faculty_id": 102973
+  },
+  {
+    "panel_id": 47,
+    "faculty_id": 102710
+  },
+  {
+    "panel_id": 47,
+    "faculty_id": 102722
+  },
+  {
+    "panel_id": 47,
+    "faculty_id": 102893
+  }
+ ]

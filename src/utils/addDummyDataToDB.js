@@ -25,22 +25,51 @@ async function addDummyDataToDB() {
     //     return {...faculty,password: pass}
     // }))
     // await Faculty.bulkCreate(adminData);
+    
     await Faculty.bulkCreate(facultyData);
     await Panel.bulkCreate(panelData);
+    // panelMemberData?.forEach(async (panelMember) => {
+    //   try {
+    //     const f = await Faculty.findOne({
+    //       where: { faculty_id: panelMember.faculty_id },
+    //     });
+    //     if (!f){
+    //       console.log(panelMember);
+    //     }
+    //     await PanelMember.create(panelMember);
+    //   } catch (error) {
+    //     console.log(panelMember);
+    //   }
+    // });
+
     await PanelMember.bulkCreate(panelMemberData);
     const batches = await Promise.all(
       batchData.map(async (batch) => {
         const pm_id = await PanelMember.findOne({
           where: { faculty_id: batch.panel_member_id },
         });
-        return { ...batch, panel_member_id: pm_id.id };
+        if(!pm_id.id){
+          console.log(pm_id,batch);
+        }
+        return { ...batch, panel_member_id: pm_id.id ? pm_id.id : 87 };
       })
     );
     await Batch.bulkCreate(batches);
     await Project.bulkCreate(projectData);
     await Student.bulkCreate(studentData);
+    // let students = []
+    // await Promise.all(studentData.forEach(async (student) => {
+    //   try {
+    //     await Student.create(student);
+    //   } catch (error) {
+    //     // console.log(student);
+    //     students.push(student)
+    //   }
+    // }));
+    // console.log(students);
     await FacultyAdviser.bulkCreate(facultyAdviserData);
     await Sdg.bulkCreate(sdgData);
+
     // await Promise.all( facultyAdviserData.forEach(async (facultyAdviser) => {
     //   try {
     //     await FacultyAdviser.create(facultyAdviser)

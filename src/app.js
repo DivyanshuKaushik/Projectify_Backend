@@ -21,6 +21,7 @@ import PanelMember from "./models/panel-member.model";
 import FacultyAdviser from "./models/faculty-adviser.model";
 import Grade from "./models/grade.model";
 import sequalize from "./db";
+import Sdg from "./models/sdg.model";
 const app = express();
 
 // dotenv config - loading env secrets
@@ -30,7 +31,7 @@ dotenv.config();
 connectDB();
 
 // add dummy data to db
-// addDummyDataToDB();
+addDummyDataToDB();
 
 // parse request - incoming data
 app.use(express.json());
@@ -61,6 +62,12 @@ app.get("/", async (req, res) => {
   // res.json({ status: true, message: "Our node.js app works",faculty ,batch,student,project});
   // const p  = await Panel.findAll();
   // console.log(p);
+  const stu = (await Student.findAll())
+  const fa = (await FacultyAdviser.findAll())
+  const pro = (await Project.findAll())
+  const sdg = (await Sdg.findAll())
+  const b = (await Batch.findAll())
+  const p = (await PanelMember.findAll({where:{panel_id:1}}))
   const panel_1 = await Panel.findOne({
     where: { panel_id: 1 },
     include: [
@@ -109,7 +116,7 @@ app.get("/", async (req, res) => {
   // const t = await FacultyAdviser.findAll({where:{faculty_id:"102463"},attributes:{include:[
   //     sequalize.literal(`SELECT name FROM Students WHERE Students.student_id = FacultyAdviser.student_id`)
   // ]}})
-  res.json({ status: true, message: "Our node.js app works", s, panel_1 });
+  res.json({ status: true, message: "Our node.js app works",sdg,stu,fa,pro,b,p,s, panel_1 });
 });
 
 app.listen(PORT, () => console.log(`App listening at port ${PORT}`));
