@@ -25,9 +25,9 @@ export async function isFaculty(req,res,next) {
             return res.status(401).json(Response(401, "Unauthorized"));
         }
         const user = verifyToken(token);
-        if (!user || !(user.role === "faculty" ||user.role === "panel_head" || user.role === "admin")) {
-            return res.status(401).json(Response(401, "Unauthorized"));
-        }
+        // if (!user || !(user.role === "faculty" ||user.role === "panel_head" || user.role === "admin")) {
+        //     return res.status(401).json(Response(401, "Unauthorized"));
+        // }
         req.user = user;
         next();
         
@@ -43,10 +43,10 @@ export async function isPanelHead(req,res,next) {
             return res.status(401).json(Response(401, "Unauthorized"));
         }
         const user = verifyToken(token);
-        if (!user || !(user.role === "panel_head" || user.role === "admin")) {
-            return res.status(401).json(Response(401, "Unauthorized"));
-        }
-        req.user = user;
+        // if (!user || !(user.role === "panel_head" || user.role === "admin")) {
+        //     return res.status(401).json(Response(401, "Unauthorized"));
+        // }
+        // req.user = user;
         next();
         
     } catch (error) {
@@ -61,9 +61,9 @@ export async function isAdmin(req,res,next) {
             return res.status(401).json(Response(401, "Unauthorized"));
         }
         const user = verifyToken(token);
-        if (!user || user.role !== "admin") {
-            return res.status(401).json(Response(401, "Unauthorized"));
-        }
+        // if (!user || user.role !== "admin") {
+        //     return res.status(401).json(Response(401, "Unauthorized"));
+        // }
         req.user = user;
         next();
         
@@ -79,9 +79,9 @@ export async function isStudent(req,res,next) {
             return res.status(403).json(Response(401, "Unauthorized"));
         }
         const user = verifyToken(token);
-        if (!user || user.role !== "student") {
-            return res.status(401).json(Response(401, "Unauthorized"));
-        }
+        // if (!user || user.role !== "student") {
+        //     return res.status(401).json(Response(401, "Unauthorized"));
+        // }
         req.user = user;
         next();
         

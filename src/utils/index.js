@@ -14,9 +14,9 @@ export async function verifyHash(plain, hashed) {
 }
 
 export function generateToken(payload) {
-    return jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: '5d' });
+    return jwt.sign(payload, "projectify-backend-developed-by-divyanshu-kaushik-jwt-secret", { expiresIn: '5d' });
 }
 
 export function verifyToken(token) {
-    return jwt.verify(token, process.env.JWT_SECRET);
+    return jwt.verify(token, "projectify-backend-developed-by-divyanshu-kaushik-jwt-secret");
 }
