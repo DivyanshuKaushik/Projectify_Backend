@@ -31,7 +31,7 @@ dotenv.config();
 connectDB();
 
 // add dummy data to db
-addDummyDataToDB();
+// addDummyDataToDB();
 
 // parse request - incoming data
 app.use(express.json());
