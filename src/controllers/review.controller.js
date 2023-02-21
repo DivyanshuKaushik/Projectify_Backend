@@ -67,6 +67,53 @@ const reviewController = {
         .json(Response(500, "Internal Server Error", error));
     }
   },
+  async updateReview(req, res) {
+    try {
+      const { deadline, batch, phase, fields } = req.body;
+      const data = await Review.update(
+        {
+          deadline,
+          batch,
+          phase,
+          fields,
+        },
+        {
+          where: {
+            id: req.params.id,
+          },
+        }
+      );
+      return res.json(Response(200, "Review updated successfully", data));
+    } catch (error) {
+      return res
+        .status(500)
+        .json(Response(500, "Internal Server Error", error));
+    }
+  },
+  async toggleReviewEdit(req, res) {
+    try {
+      const { edit } = req.body;
+      // console.log(req.body);
+      const data = await Review.update(
+        {
+          edit,
+        },
+        {
+          where: {
+            id: req.params.id,
+          },
+        }
+      );
+      console.log(edit, req, req.body);
+      return res.json(
+        Response(200, "Review updated successfully", { data, edit })
+      );
+    } catch (error) {
+      return res
+        .status(500)
+        .json(Response(500, "Internal Server Error", error));
+    }
+  },
 };
 
 export default reviewController;

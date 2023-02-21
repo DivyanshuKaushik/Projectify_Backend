@@ -23,6 +23,11 @@ const Review = sequelize.define("Review", {
     type: DataTypes.TEXT,
     allowNull: false,
   },
+  edit: {
+    type: DataTypes.BOOLEAN,
+    allowNull: false,
+    defaultValue: false,
+  },
 });
 
 export default Review;

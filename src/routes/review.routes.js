@@ -14,4 +14,8 @@ router.post("/review", isAdmin, reviewController.createReview);
 
 router.delete("/review/:id", isAdmin, reviewController.deleteReview);
 
+// router.put("/review/:id", isAdmin, reviewController.updateReview);
+
+router.put("/review/:id", isAdmin, reviewController.toggleReviewEdit);
+
 export default router;

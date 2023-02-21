@@ -133,14 +133,12 @@ const studentController = {
   async updateGrade(req, res) {
     try {
       const { id } = req.params;
-      const { grade, graded_by, phase } = req.body;
+      const { grade } = req.body;
       const findGrade = await Grade.findByPk(id);
       if (findGrade) {
         const data = await Grade.update(
           {
             grade,
-            graded_by,
-            phase,
           },
           { where: { id } }
         );
