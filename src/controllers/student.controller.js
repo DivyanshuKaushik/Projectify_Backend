@@ -153,5 +153,18 @@ const studentController = {
         .json(Response(500, "Internal Server Error", error));
     }
   },
+
+  async getAllGrades(req, res) {
+    try {
+      // const { studentId } = req.params;
+      const data = await Grade.findAll();
+      return res.json(Response(200, "Success", data));
+    } catch (error) {
+      console.log(error);
+      return res
+        .status(500)
+        .json(Response(500, "Internal Server Error", error));
+    }
+  },
 };
 export default studentController;
