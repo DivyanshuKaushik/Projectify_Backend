@@ -20,6 +20,11 @@ const Project = sequelize.define("Project", {
     type: DataTypes.INTEGER,
     allowNull: true,
   },
+  type: {
+    type: DataTypes.STRING,
+    allowNull: false,
+    defaultValue: "project",
+  },
 });
 Project.hasMany(Student, {
   foreignKey: {

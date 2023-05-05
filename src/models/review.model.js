@@ -28,6 +28,11 @@ const Review = sequelize.define("Review", {
     allowNull: false,
     defaultValue: false,
   },
+  type: {
+    type: DataTypes.STRING,
+    allowNull: false,
+    defaultValue: "project",
+  },
 });
 
 export default Review;

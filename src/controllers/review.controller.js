@@ -24,12 +24,13 @@ const reviewController = {
   },
   async createReview(req, res) {
     try {
-      const { deadline, batch, phase, fields } = req.body;
+      const { deadline, batch, phase, fields, type } = req.body;
       const data = await Review.create({
         deadline,
         batch,
         phase,
         fields,
+        type,
       });
       return res.json(Response(200, "Review created successfully", data));
     } catch (error) {
